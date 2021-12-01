@@ -1,24 +1,19 @@
-import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {Helmet} from 'helmet-react';
+import {Helmet} from 'react-helmet';
+import Navbar from 'react-bootstrap/Navbar'
 
 const NotFound = () => {
-    const [timer, setTimer] = useState(5);
     const navigate = useNavigate();
 
-    useEffect(() =>{
-        const intervalId = setTimer(() =>{
-            setTimer(timer => --timer)
-            if (timer === 0) {
-                navigate('/')
-            }
-        }, 1000);
-        return () => clearInterval(intervalId)
-    }, [navigate, timer])
+    setTimeout(() =>{
+        navigate('/');
+    }, 5000);
     return (
         <>
+        <Helmet>
+            <title>1UP Games | Não encontrada</title>
+        </Helmet>
         <h2>Essa página não existe ;~</h2>
-        <h3>Redirecionando em {timer}</h3>
         </>
     )
 }

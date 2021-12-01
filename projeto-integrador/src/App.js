@@ -1,8 +1,10 @@
-import RouteList from 'routes';
+import RouteList from './routes';
 
 function App() {
   return (
+    <>
     <RouteList />
+    </>
   );
 }
 
