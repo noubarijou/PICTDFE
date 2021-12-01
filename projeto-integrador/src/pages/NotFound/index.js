@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import {Helmet} from 'helmet-react';
 
 const NotFound = () => {
     const [timer, setTimer] = useState(5);
