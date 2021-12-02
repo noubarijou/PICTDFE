@@ -11,7 +11,7 @@ const NotFound = () => {
     return (
         <>
         <Helmet>
-            <title>1UP Games | Não encontrada</title>
+            <title>1UP Games | Oops?</title>
         </Helmet>
         <h2>Essa página não existe ;~</h2>
         </>
