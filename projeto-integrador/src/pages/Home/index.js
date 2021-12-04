@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import { Link, useParams } from 'react-router-dom';
 import api from '../../services/lojaAPI';
 import { Helmet } from 'react-helmet';
+import Header from './components/Header';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Helmet>
             <title>1UP Games | Home</title>
         </Helmet>
+        <Header />
         </>
     )
 
