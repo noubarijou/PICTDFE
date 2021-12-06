@@ -9,7 +9,7 @@ const Produtos = () => {
     return (
         <>
         <Helmet>
-            <title>1UP Games | Jogos</title>
+            <title>Poison Games | Jogos</title>
         </Helmet>
         </>
     )
