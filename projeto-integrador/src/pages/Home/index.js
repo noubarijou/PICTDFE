@@ -6,19 +6,20 @@ import './style.scss'
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import CardJogo from "../../components/CardJogo";
 
 const Home = () => {
 
     const responsive = {
-        // md: {
-        //     breakpoint: { max: 3000, min: 1024 },
-        //     items: 3,
-        //     slidesToSlide: 3
-        // },
-        sm: {
-            breakpoint: { max: 4000, min: 576 },
+        md: {
+            breakpoint: { max: 10000, min: 768 },
             items: 3,
             slidesToSlide: 3
+        },
+        sm: {
+            breakpoint: { max: 768, min: 576 },
+            items: 2,
+            slidesToSlide: 2
         },
         xs: {
             breakpoint: { max: 576, min: 0 },
@@ -34,7 +35,6 @@ const Home = () => {
             <section className="parallax">
                 <article className="apresentacao text-center mx-4">
                     <h2>A melhor loja de games da nossa rua</h2>
-                    <a href="#jogos"><Button variant="success" className="text-uppercase">Confira</Button></a>
                 </article>
                 <section className="recomendados">
                     <Carousel
@@ -44,7 +44,7 @@ const Home = () => {
                         {
                             jogos.filter((item, index) => index < 6).map((jogo, index) => {
                                 return (
-                                    <div key={index + 1} className="mb-4">
+                                    <div key={index} className="mb-4 mx-3">
                                         <img src={jogo.imagem} alt={jogo.titulo} />
                                         <h4 className="mt-2">{jogo.titulo}</h4>
                                     </div>
@@ -54,8 +54,14 @@ const Home = () => {
                     </Carousel>
                 </section>
             </section>
-            <section>
-
+            <section className="jogos m-sm-5">
+                {
+                    jogos.filter((item, index) => index < 12).map((jogo, index) => {
+                        return (
+                            <CardJogo key={index} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria_id.nome} preco={jogo.preco} />
+                        )
+                    })
+                }
             </section>
         </>
     )

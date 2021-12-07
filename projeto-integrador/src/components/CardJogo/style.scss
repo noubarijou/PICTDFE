@@ -1,0 +1,27 @@
+@import '../../root.scss';
+
+.card-jogo {
+    width: 90%;
+
+    img {
+        width: 100%;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        button {
+            height: 2rem;
+            background-color: $branco;
+            border-radius: 10px;
+            padding: 0 0.5rem;
+            border: none;
+        }
+    }
+}
+
+hr {
+    width: 90%;
+}
