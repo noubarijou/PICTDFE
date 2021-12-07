@@ -1,0 +1,35 @@
+@import '../../root.scss';
+
+.parallax {
+    display:flex;
+    flex-direction:column;
+    gap: 5rem;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-image: url(../../img/fundo.png);
+    background-attachment: fixed;
+    background-position: center;
+
+    color: $destaque;
+
+    .apresentacao {
+        margin: 0 2rem;
+
+        h2,
+        a {
+            text-decoration: none;
+        }
+
+        a {
+            button {
+                font-weight: bold;
+                color: $branco;
+            }
+        }
+    }
+
+    .recomendados {
+        text-align: center;
+    }
+}
