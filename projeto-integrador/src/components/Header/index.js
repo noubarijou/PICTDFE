@@ -1,13 +1,16 @@
+import { ShoppingCart } from '@material-ui/icons';
 import React from 'react'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo-poison-modelo1.png'
 import './style.scss'
+import { CartPlus } from 'react-bootstrap-icons';
+
 
 const Header = () => {
     return (
         <>
-           <header>
+            <header>
                 <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
                     <Container fluid>
                         <Navbar.Brand href="/" id="brand">
@@ -41,8 +44,9 @@ const Header = () => {
                                     <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
                                     <NavDropdown.Item as={Link} to="/cadastrar">Cadastrar</NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link title="Carrinho">
-                                    {/* icone do carrinho */}
+                                <Nav.Link title="Carrinho" >
+                                    <CartPlus color="white" size={30} />
+
                                 </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>

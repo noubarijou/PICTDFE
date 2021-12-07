@@ -1,0 +1,33 @@
+#footer{
+  background-color: #000 !important;
+  padding: 3rem 0 2rem 0 ;
+  .container-fluid{
+    section{
+      #col1{
+        #footerLogo{
+          display:flex;
+          justify-content: center;
+          h4{
+            align-self: center;
+          } 
+        }
+        #midiasSociais{
+          height: 100px;
+            ul{
+              
+                align-items: flex-end;  
+            }
+        }
+      }
+      #col3 {
+        h6{
+
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  
+
+}
+
