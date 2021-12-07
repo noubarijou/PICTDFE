@@ -1,0 +1,43 @@
+#Sobre {
+    color: white;
+    background: rgba(31, 35, 38, 0.5);
+    width: 80%;
+    margin: 3rem auto;
+    padding: 3rem;
+    h1{
+        text-transform: uppercase;
+    }
+    hr{
+        padding: 3px;
+    }
+    p{
+        text-align: justify;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    article {
+
+        display: flex;
+        justify-content:space-evenly;
+
+        div{            
+            //height: 10%;//
+            width: 15%;
+            img{
+                width: 100%;
+            }
+            p{
+                text-align: center;
+            }
+            hr{
+                padding: 0 2px;
+            }
+            div{
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+        }
+    }
+    
+}
