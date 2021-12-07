@@ -1,21 +1,26 @@
-// import React from 'react'
-import './style.scss';
+// import React from 'react';
 import { CartPlus } from 'react-bootstrap-icons';
+import { Link } from "react-router-dom";
+import './style.scss';
 
-const CardJogo = ({ titulo, imagem, categoria, preco }) => {
+const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
     return (
         <>
             <article className="card-jogo">
-                <img className="mb-2" src={imagem} alt={titulo} />
+                <Link to={`/jogo/${id}`}>
+                    <img className="mb-2" src={imagem} alt={titulo} />
+                </Link>
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>
                     <button className="fw-bold">
-                        <CartPlus color="black" size={16} />{`R$${preco}`}</button>
+                        <CartPlus color="black" size={16} /> {`R$${preco}`}
+                    </button>
                 </div>
-                <p>{categoria}</p>
+                <span>{categoria}</span>
             </article>
         </>
     )
 }
 
 export default CardJogo;
+

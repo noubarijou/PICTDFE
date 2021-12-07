@@ -7,6 +7,7 @@
     justify-content: center;
     width: 100%;
     height: calc(100vh - 56px);
+    background-size: cover;
     background-image: url(../../img/fundo.png);
     background-attachment: fixed;
     background-position: center;
@@ -30,21 +31,48 @@
     }
 
     .recomendados {
-        text-align: center;
 
-        .react-multi-carousel-list {
-            .react-multi-carousel-track {
-                li {
-                    img {
-                        width: 100%;
-                        border: solid 1px $destaque;
-                    }
-                    p {
+        .carousel {
+            .carousel-inner {
+
+                .carousel-item {
+                    text-align: center;
+                    // display: flex;
+                    // justify-content: center;
+
+                    .card-jogo {
                         text-align: left;
+                        display: inline-block;
                     }
                 }
+
+                
+            }
+
+            .carousel-indicators {
+                bottom: -30px;
             }
         }
+
+
+
+
+
+        // text-align: center;
+
+        // .react-multi-carousel-list {
+        //     .react-multi-carousel-track {
+        //         li {
+        //             img {
+        //                 width: 100%;
+        //                 border: solid 1px $destaque;
+        //             }
+        //             p {
+        //                 text-align: left;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
 
@@ -79,7 +107,7 @@ $screen-xl-min: 1200px;
 
 //Large tables
 @media (min-width: $screen-xl-min) {
-    .jogos {
-        // width: calc($screen-xl-min - 24px*2);
-    }
+    // .jogos {
+    //     width: calc($screen-xl-min - 24px * 2);
+    // }
 }
