@@ -58,11 +58,11 @@ const Home = () => {
                     </Carousel>
                 </section>
             </section>
-            <section className="jogos m-sm-5">
+            <section className="jogos align-items-center">
                 {
                     jogos.filter((item, index) => index < 12).map((jogo, index) => {
                         return (
-                            <CardJogo key={index} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria_id.nome} preco={jogo.preco} />
+                            <CardJogo key={index} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
                         )
                     })
                 }

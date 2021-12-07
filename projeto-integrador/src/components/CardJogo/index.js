@@ -8,7 +8,7 @@ const CardJogo = ({ titulo, imagem, categoria, preco }) => {
                 <img className="mb-2" src={imagem} alt={titulo} />
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>
-                    <button className="fw-bold">R$ {preco}</button>
+                    <button className="fw-bold">{`R$${preco}`}</button>
                 </div>
                 <p>{categoria}</p>
             </article>

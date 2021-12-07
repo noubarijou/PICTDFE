@@ -1,8 +1,8 @@
-@import '../../root.scss';
+@import "../../root.scss";
 
 .parallax {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     gap: 5rem;
     justify-content: center;
     width: 100%;
@@ -50,9 +50,36 @@
 
 .jogos {
     color: $branco;
-    margin: 2rem 0;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@media (min-width: $screen-sm-min) {
+    .jogos {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+//Large tables
+@media (min-width: $screen-xl-min) {
+    .jogos {
+        // width: calc($screen-xl-min - 24px*2);
+    }
 }

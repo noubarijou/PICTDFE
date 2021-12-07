@@ -1,9 +1,11 @@
-@import '../../root.scss';
+@import "../../root.scss";
 
 .card-jogo {
-    width: 90%;
+    width: 100%;
 
     img {
+        position: relative;
+        top: 0;
         width: 100%;
     }
 
@@ -20,8 +22,46 @@
             border: none;
         }
     }
+
+    p {
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
-hr {
-    width: 90%;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@media (min-width: $screen-sm-min) {
+    .card-jogo {
+        width: calc(50% - 2rem);
+        margin: 1rem;
+    }
+}
+
+//Small tables
+@media (min-width: $screen-lg-min) {
+    .card-jogo {
+        width: calc(33% - 2rem);
+        margin: 1rem;
+    }
+}
+
+//Large tables
+@media (min-width: $screen-xl-min) {
+    .card-jogo {
+        width: calc(25% - 2rem);
+    }
 }
