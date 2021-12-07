@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
+import Login from '../pages/Login';
 
 
 const RouteList = () => (
@@ -11,7 +12,7 @@ const RouteList = () => (
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/login" element={<Login />} /> */}
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
