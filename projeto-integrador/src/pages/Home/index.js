@@ -7,6 +7,7 @@ import './style.scss'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardJogo from "../../components/CardJogo";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
 
@@ -32,6 +33,9 @@ const Home = () => {
 
     return (
         <>
+        <Helmet>
+        <title>Poison Games | Home</title>
+        </Helmet>
             <section className="parallax">
                 <article className="apresentacao text-center mx-4">
                     <h2>A melhor loja de games da nossa rua</h2>

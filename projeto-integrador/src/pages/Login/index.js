@@ -1,4 +1,3 @@
-import Home from '../Home';
 import { useState } from "react";
 import { TextField, InputAdornment, IconButton } from "@material-ui/core";
 import { Person, Lock } from "@material-ui/icons";
@@ -24,7 +23,7 @@ const Login = () => {
             .email('bota um email de verdade...')
             .required('tem que botá um email...'),
             password: Yup.string()
-            .min(5)
+            .min(5, 'pelo menos 5 bagulhinho...')
             .required('tem que botá uma senha'),
         }),
         onSubmit: (values) => {
