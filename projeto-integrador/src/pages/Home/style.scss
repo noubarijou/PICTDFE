@@ -31,5 +31,17 @@
 
     .recomendados {
         text-align: center;
+
+        .react-multi-carousel-list {
+            .react-multi-carousel-track {
+                li {
+                    img {
+                        width: 80%;
+                        border: solid 1px $destaque;
+                        // box-shadow: 1px 1px 6px 0 $branco;
+                    }
+                }
+            }
+        }
     }
 }

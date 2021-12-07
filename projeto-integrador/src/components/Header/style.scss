@@ -1,0 +1,29 @@
+/* img{
+    &#logo{
+        height: 50px;
+    }
+} */
+
+header {
+    a {
+        text-decoration: none !important;
+        color: white !important;
+    }
+    title {
+        color: white;
+    }
+
+    #basic-nav-dropdown {
+        color: white;
+    }
+
+    .dropdown-menu {
+        background-color: #212529 !important;
+        
+        .dropdown-item {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+        }
+    }
+}
