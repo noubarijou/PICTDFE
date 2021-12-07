@@ -1,12 +1,84 @@
-import React from "react";
+import {useState} from "react";
 import { Helmet } from "react-helmet";
+import {Formik, Field, Form, ErrorMessage} from 'formik';
+import * as Yup from 'yup';
+import {Container} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router';
 
 const Cadastro = () => {
-  return (
+  const navigate = useNavigate();
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
+  
+  const validationSchema = Yup.object({
+    nomecompleto: Yup.string().max(40, 'Máximo de 40 bagulhinho').required('Tem q botá o nome pow...'),
+    datadenascimento: Yup.date().required('tem q botá a data'),
+    email: Yup.string().email('bota um email aí').required('Tem q botá um email pow'),
+    senha: Yup.string().min(8, 'no mínimo 8 bagulhinho').required('Tem q botá a senha'),
+    senhaconfirma: Yup.string().oneOf([Yup.ref('senha')], 'tem q ser a mesma senha...').required('Tem q botá a senha...')
+    });
+    return (
     <>
       <Helmet>
         <title>Poison Games | Cadastro</title>
       </Helmet>
+      <Container>
+        <Formik initialValues={{
+          nomecompleto: '',
+          datadenascimento: '',
+          email: '',
+          senha: '',
+          senhaconfirma: ''
+        }} validationSchema={validationSchema} onSubmit={(values) => {
+          console.log(values);
+          setIsSubmitSuccess(true)}
+      }>
+        {isSubmitSuccess ? (
+              navigate('/login')
+          ) : (
+          <Form className="form">
+          <div>
+            <label htmlFor="nomecompleto">Nome completo</label>
+            <Field name="nomecompleto" />
+            <p className="error"><ErrorMessage name="nomecompleto" /></p>
+          </div>
+          <div>
+              <label htmlFor="email">Email*</label>
+              <Field name="email" />
+              <p className="error">
+                <ErrorMessage name="email" />
+              </p>
+            </div>
+            <div>
+              <label htmlFor="datadenascimento">Data de Nascimento</label>
+              <Field name="datadenascimento" type="date"/>
+              <p className="error"><ErrorMessage name="datadenascimento" /></p>
+            </div>
+            <div>
+              <label htmlFor="senha">Defina a senha*</label>
+              <Field type="senha" name="senha" />
+              <p className="error">
+                <ErrorMessage name="senha" />
+              </p>
+            </div>
+            <div>
+              <label htmlFor="senhaconfirma">Confirme a senha*</label>
+              <Field type="senha" name="senhaconfirma" />
+              <p className="error">
+                <ErrorMessage name="senhaconfirma" />
+              </p>
+            </div>
+            <button className="submit" type="submit">
+              Cadastrar
+            </button>
+            <h3> Já tem conta? <Link to="/login">Entre por aqui!</Link></h3>
+          </Form>
+          )}
+        </Formik>
+          
+      </Container>
+      
+
     </>
   );
 };

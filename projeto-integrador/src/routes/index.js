@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
+import Cadastro from '../pages/Cadastro';
 
 
 const RouteList = () => (
@@ -12,6 +13,7 @@ const RouteList = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
