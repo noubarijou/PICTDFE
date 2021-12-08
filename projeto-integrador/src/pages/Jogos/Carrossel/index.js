@@ -1,17 +1,15 @@
 import React from 'react'
 
-import useAxios from "../../../Hooks/useAxios";
 import './style.scss';
 import { Carousel } from 'react-bootstrap';
 import CardJogo from "../../../components/CardJogo";
 import { Spinner } from 'react-bootstrap';
 
 
-const Carrossel = ({ categoria, id }) => {
-  const jogos = useAxios(`/categoria`)
+const Carrossel = ({ categoria, id, jogo }) => {
   return (
     <>
-      {jogos[0] ?
+      {jogo[0] ?
         (
           <div className="jogo-categoria">
             <h4>{categoria}</h4>
@@ -19,7 +17,7 @@ const Carrossel = ({ categoria, id }) => {
             <Carousel>
               <Carousel.Item interval={5000 * 1000}>
                 {
-                  jogos.filter((item, index) => item.id === id).map((e) => {
+                  jogo.filter((item, index) => item.id === id).map((e) => {
                     return (
                       e.produtos.filter((item, index) => index < 3).map((jogo, index) => {
                         return (
@@ -29,11 +27,10 @@ const Carrossel = ({ categoria, id }) => {
                     )
                   })
                 }
-
               </Carousel.Item>
               <Carousel.Item interval={5000 * 1000}>
                 {
-                  jogos.filter((item, index) => item.id === id).map((e) => {
+                  jogo.filter((item, index) => item.id === id).map((e) => {
                     return (
                       e.produtos.filter((item, index) => index >= 3).map((jogo, index) => {
                         return (

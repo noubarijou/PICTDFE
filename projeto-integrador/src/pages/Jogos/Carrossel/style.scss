@@ -1,23 +1,42 @@
-@import '../../../root.scss';
+@import "../../../root.scss";
 
-.jogo-categoria{
+.jogo-categoria {
   margin: 1.5rem 0 3rem;
-  h4{
+
+  h4 {
     color: $branco;
     margin: 0 8rem 1rem;
     text-transform: uppercase;
   }
-  .linha-carrossel{
+
+  .linha-carrossel {
     height: 2px;
     background-color: $destaque;
-    margin: 0 8rem 1rem  ;
+    margin: 0 8rem 1rem;
   }
-  span{
+
+  > span {
     display: none;
   }
 
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        text-align: center;
+        background: rgb(0, 0, 0);
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 85%);
+
+        .card-jogo {
+          text-align: left;
+          display: inline-block;
+          border-radius: 5px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .carousel-indicators {
+      bottom: -30px;
+    }
+  }
 }
-
-
-
-

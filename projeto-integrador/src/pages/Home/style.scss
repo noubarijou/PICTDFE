@@ -1,23 +1,5 @@
 @import "../../root.scss";
 
-.content {
-    min-height: calc(100vh - 283px - 76px - 1.5rem);
-
-    .modal-loading {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .spinner-border {
-            width: 3rem;
-            height: 3rem;
-            color: white;
-        }
-    }
-}
-
 .parallax {
     display: flex;
     flex-direction: column;

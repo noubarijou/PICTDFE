@@ -6,7 +6,7 @@ import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
 import Sobre from '../pages/Sobre';
 import Cadastro from '../pages/Cadastro';
-import Jogo from '../pages/Jogo';
+import Jogo from '../pages/Jogos/Jogo';
 import Jogos from '../pages/Jogos';
 import Suporte from '../pages/Suporte';
 

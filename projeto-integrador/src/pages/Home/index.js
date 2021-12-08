@@ -18,7 +18,7 @@ const Home = () => {
     }, [jogos])
 
     return (
-        <div className="content">
+        <>
             <Helmet>
                 <title>Poison Games | Home</title>
             </Helmet>
@@ -67,7 +67,7 @@ const Home = () => {
                 <div className="modal-loading">
                     <Spinner animation="border" />
                 </div>}
-        </div>
+        </>
     )
 }
 

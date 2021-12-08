@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import useAxios from "../../Hooks/useAxios";
 import './style.scss';
 import Carrossel from './Carrossel';
-
+import { Spinner } from 'react-bootstrap';
 
 const Jogos = () => {
   const jogos = useAxios(`/categoria`)
@@ -14,14 +14,19 @@ const Jogos = () => {
       </Helmet>
       <section>
         <section className="Jogos">
-          <Carrossel categoria={"Ação"} id={1} />
-          <Carrossel categoria={"RPG"} id={2} />
-          <Carrossel categoria={"Estratégia"} id={3} />
-          <Carrossel categoria={"Aventura"} id={4} />
-          <Carrossel categoria={"Simulador"} id={5} />
-          <Carrossel categoria={"Esportes"} id={6} />
-          <Carrossel categoria={"Corrida"} id={7} />
+          {jogos[0] ?
+            (jogos.map((e, index) => {
+              return (
+                <Carrossel key={index} categoria={e.nome} id={e.id} jogo={jogos} />
+              )
+            }))
 
+            :
+
+            <div className="modal-loading">
+              <Spinner animation="border" />
+            </div>
+          }
         </section>
       </section>
 
