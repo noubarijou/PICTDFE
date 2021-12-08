@@ -24,7 +24,6 @@
             display: flex;
             margin: 0 auto;
             flex-direction: column;
-            width: 40%;
             p {
                 font-size: 10px;
                 padding-left: 0.3rem;
@@ -35,10 +34,17 @@
                 border-radius: 20px;
                 border: none;
                 color: $branco;
+                display: block;
                 &::placeholder {
                     color: $branco;
                 }
-                display: block;
+                &[type=date]{
+                    padding: 0 0.5rem;
+                    &::-webkit-calendar-picker-indicator {
+                        color: $branco;
+                        filter: invert(1);
+                    }
+                }
             }
             label {
                 padding-left: 0.3rem;
@@ -49,7 +55,6 @@
             border-radius: 20px;
             border: none;
             font-weight: 700;
-            width: 10%;
             margin: 1rem auto;
         }
         .criarconta {
