@@ -57,7 +57,7 @@ const Header = () => {
                         </Navbar>
 
 
-                        : // SE NÃO ROLAR A PRIMEIRA COISA, ROLA ESSA DEBAIXO
+                        : // SE NÃO FOR /\ VAI SER V
 
 
                         <Navbar bg="dark" variant="dark" expand="lg">
