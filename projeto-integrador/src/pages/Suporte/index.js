@@ -55,6 +55,7 @@ const Suporte = () => {
               <label htmlFor="mensagem">Manda tua msg</label>
               <Field
                 component="textarea"
+                rows = "5"
                 name="mensagem"
                 placeholder="tua mensagem..."
               />

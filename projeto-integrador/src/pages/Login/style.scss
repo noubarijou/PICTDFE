@@ -1,8 +1,8 @@
 @import "../../root.scss";
 
 #login {
-    color: white;
-    background: rgba(31, 35, 38, 0.5);
+    color: $branco;
+    background: $bg-card;
     width: 80%;
     margin: 3rem auto;
     padding: 3rem;
@@ -19,4 +19,9 @@
         font-size: 18px;
         font-weight: 500;
     }
+    .submit {
+        background: $destaque;
+        border-radius: 20px;
+    }
+    
 }

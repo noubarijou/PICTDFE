@@ -40,41 +40,43 @@ const Cadastro = () => {
           <Form className="form">
           <h1>Cadastro</h1>
           <div className="linha mb-4"></div>
+          <div className="form-cadastro">
           <div>
             <label htmlFor="nomecompleto">Nome completo</label>
-            <Field name="nomecompleto" placeholder="Bota teu nome completo"/>
+            <Field className="input-field" name="nomecompleto" placeholder="Bota teu nome completo"/>
             <p className="error"><ErrorMessage name="nomecompleto" /></p>
           </div>
           <div>
               <label htmlFor="email">Email</label>
-              <Field name="email" placeholder="teu email" type="email" />
+              <Field className="input-field" name="email" placeholder="teu email" type="email" />
               <p className="error">
                 <ErrorMessage name="email" />
               </p>
             </div>
             <div>
               <label htmlFor="datadenascimento">Data de Nascimento</label>
-              <Field name="datadenascimento" type="date"/>
+              <Field className="input-field" name="datadenascimento" type="date"/>
               <p className="error"><ErrorMessage name="datadenascimento" /></p>
             </div>
             <div>
               <label htmlFor="senha">Defina a senha</label>
-              <Field type="password" name="senha" />
+              <Field className="input-field" type="password" name="senha" />
               <p className="error">
                 <ErrorMessage name="senha" />
               </p>
             </div>
             <div>
               <label htmlFor="senhaconfirma">Confirme a senha</label>
-              <Field type="password" name="senhaconfirma" />
+              <Field className="input-field" type="password" name="senhaconfirma" />
               <p className="error">
                 <ErrorMessage name="senhaconfirma" />
               </p>
             </div>
-            <button className="submit" type="submit">
+            </div>
+            <button className="submit mx-auto" type="submit">
               Cadastrar
             </button>
-            <h3> Já tem conta? <Link to="/login">Entre por aqui!</Link></h3>
+            <p className="criarconta"> Já tem conta? <Link className="linklogin" to="/login">Entre por aqui!</Link></p>
           </Form>
           )}
         </Formik>

@@ -8,10 +8,11 @@ import {Helmet} from 'react-helmet';
 import {Link} from 'react-router-dom';
 import {useNavigate} from 'react-router';
 import './style.scss';
-
+import useStyles from './style';
 
 
 const Login = () => {
+  const classes = useStyles();
     const navigate = useNavigate();
     const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
     const formik = useFormik({
@@ -47,8 +48,9 @@ const Login = () => {
             <TextField
               name="email"
               type="text"
+              color="success"
               placeholder="Email"
-              className="textField"
+              className={classes.textField}
               InputProps={{
                 startAdornment: (
                   <InputAdornment>
