@@ -13,7 +13,7 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>
                     <button className="fw-bold">
-                        <CartPlus color="black" size={16} /> {`R$${preco}`}
+                        <CartPlus color="black" size={16} />R$ {`${preco}`.includes(".") ? `${preco}`.replace('.', ',') : `${preco},00`}
                     </button>
                 </div>
                 <span>{categoria}</span>

@@ -6,6 +6,7 @@ import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
 import Sobre from '../pages/Sobre';
 import Cadastro from '../pages/Cadastro';
+import Jogo from '../pages/Jogo';
 
 
 const RouteList = () => (
@@ -13,6 +14,7 @@ const RouteList = () => (
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/jogo/:jogoId" element={<Jogo />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/login" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />
