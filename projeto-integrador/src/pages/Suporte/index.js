@@ -1,9 +1,9 @@
-import {Link} from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Swal from 'sweetalert2';
 import {Container} from 'react-bootstrap';
+import './style.scss';
 
 
 const Suporte = () => {
@@ -25,8 +25,9 @@ const Suporte = () => {
       <Helmet>
         <title>Poison Games | Suporte</title>
       </Helmet>
-      <Container>
+      <Container id="suporte">
         <h1>Manda um oi panois</h1>
+        <div className="linha mb-4"></div>
         <Formik initialValues={{
           nomecompleto: '',
           email: '',
@@ -37,14 +38,14 @@ const Suporte = () => {
         >
           <Form className="form">
             <div>
-              <label htmlFor="nomecompleto">First name*</label>
+              <label htmlFor="nomecompleto">Nome Completo</label>
               <Field name="nomecompleto" placeholder="Bota teu nome completo" />
               <p className="error">
                 <ErrorMessage name="nomecompleto" />
               </p>
             </div>
             <div>
-              <label htmlFor="email">Email*</label>
+              <label htmlFor="email">Email</label>
               <Field name="email" placeholder="teu email" type="email" />
               <p className="error">
                 <ErrorMessage name="email" />

@@ -7,6 +7,7 @@ import {Container} from 'react-bootstrap';
 import {Helmet} from 'react-helmet';
 import {Link} from 'react-router-dom';
 import {useNavigate} from 'react-router';
+import './style.scss';
 
 
 
@@ -36,12 +37,13 @@ const Login = () => {
       <Helmet>
         <title>Poison Games | Login</title>
       </Helmet>
-      <Container>
+      <Container id="login">
           {isSubmitSuccess ? (
               navigate('/')
           ) : (
       <form onSubmit={formik.handleSubmit}>
-            <h2>Login</h2>
+            <h1>Login</h1>
+            <div className="linha mb-4"></div>
             <TextField
               name="email"
               type="text"
@@ -87,8 +89,8 @@ const Login = () => {
               <div className="error_msg">{formik.errors.password}</div>
             ) : null}
 
-            <button type="submit">Entrar</button>
-            <h3> Não tem conta? <Link to="/cadastro">Crie uma!</Link></h3>
+            <button type="submit" className="submit">Entrar</button>
+            <h5> Não tem conta? <Link to="/cadastro">Crie uma!</Link></h5>
           </form>
           )}
       </Container>

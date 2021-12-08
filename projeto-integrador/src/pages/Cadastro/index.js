@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import {Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {useNavigate} from 'react-router';
+import './style.scss';
 
 const Cadastro = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Cadastro = () => {
       <Helmet>
         <title>Poison Games | Cadastro</title>
       </Helmet>
-      <Container>
+      <Container id="cadastro">
         <Formik initialValues={{
           nomecompleto: '',
           datadenascimento: '',
@@ -37,13 +38,15 @@ const Cadastro = () => {
               navigate('/login')
           ) : (
           <Form className="form">
+          <h1>Cadastro</h1>
+          <div className="linha mb-4"></div>
           <div>
             <label htmlFor="nomecompleto">Nome completo</label>
             <Field name="nomecompleto" placeholder="Bota teu nome completo"/>
             <p className="error"><ErrorMessage name="nomecompleto" /></p>
           </div>
           <div>
-              <label htmlFor="email">Email*</label>
+              <label htmlFor="email">Email</label>
               <Field name="email" placeholder="teu email" type="email" />
               <p className="error">
                 <ErrorMessage name="email" />
@@ -55,14 +58,14 @@ const Cadastro = () => {
               <p className="error"><ErrorMessage name="datadenascimento" /></p>
             </div>
             <div>
-              <label htmlFor="senha">Defina a senha*</label>
+              <label htmlFor="senha">Defina a senha</label>
               <Field type="password" name="senha" />
               <p className="error">
                 <ErrorMessage name="senha" />
               </p>
             </div>
             <div>
-              <label htmlFor="senhaconfirma">Confirme a senha*</label>
+              <label htmlFor="senhaconfirma">Confirme a senha</label>
               <Field type="password" name="senhaconfirma" />
               <p className="error">
                 <ErrorMessage name="senhaconfirma" />
