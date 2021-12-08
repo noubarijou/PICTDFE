@@ -16,7 +16,7 @@ const Home = () => {
             <Helmet>
                 <title>Poison Games | Home</title>
             </Helmet>
-            <section className="parallax">
+            <section className="parallax transbox">
                 <article className="apresentacao text-center mx-4">
                     <h2>A melhor loja de games da sua rua</h2>
                 </article>

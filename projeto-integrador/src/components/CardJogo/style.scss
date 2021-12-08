@@ -32,6 +32,10 @@
             background-color: $branco;
             border-radius: 10px;
             border: none;
+
+            &:hover{
+                background-color: $destaque;
+            }
         }
     }
 
@@ -39,7 +43,8 @@
         margin-left: 0.8rem;
         padding: 0.3rem;
         border-radius: 10px;
-        filter: drop-shadow(2px 2px 1px $destaque);
+        font-size: 16px;
+        /* filter: drop-shadow(2px 2px 1px $destaque); */
     }
 }
 

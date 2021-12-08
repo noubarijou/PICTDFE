@@ -1,5 +1,6 @@
 @import "../../root.scss";
 
+
 .parallax {
     display: flex;
     flex-direction: column;
@@ -8,11 +9,11 @@
     width: 100%;
     height: calc(100vh - 56px);
     background-size: cover;
-    background-image: url(../../img/fundo.png);
+    background-image: url(../../assets/img/fundo.png);
     background-attachment: fixed;
     background-position: center;
 
-    color: $destaque;
+    color: $branco;
 
     .apresentacao {
         margin: 0 2rem;
@@ -83,6 +84,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+
+    .card-jogo{
+        &:hover{
+            background-color: #130020;
+        }
+    }
 }
 
 // Small tablets and large smartphones (landscape view)
