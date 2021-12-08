@@ -51,8 +51,9 @@ const Footer = () => {
                         <article id="col2" className="col-md-3 col-sm-6"></article>
                         {/* coluna 3 */}
                         <article id="col3" className="col-md-3 col-sm-6">
-                            <h6>CATEGORIAS</h6>
+
                             <ul className="list-unstyled">
+                                <li><h6>CATEGORIAS</h6></li>
                                 <li>AÇÃO</li>
                                 <li>RPG</li>
                                 <li>ESTRATÉGIA</li>

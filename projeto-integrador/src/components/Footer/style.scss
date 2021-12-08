@@ -1,6 +1,6 @@
 #footer{
-  background-color: #000 !important;
-  padding: 3rem 0 2rem 0 ;
+  background-color: #1F2326 !important;
+  padding: 2.5rem 0 0 0 ;
   .container-fluid{
     section{
       #col1{
@@ -20,11 +20,21 @@
         }
       }
       #col3 {
-        h6{
-
+          display:flex;
+          font-size: .8rem;
           justify-content: flex-end;
-        }
+          text-align:left;
       }
+
+      #col4 {
+          display:flex;
+          font-size: .8rem;
+          justify-content: center;
+          text-align: left;
+      }
+    }
+    .footer-bottom{
+      border-top: 3px solid rgb(4, 251, 65);
     }
   }
   
