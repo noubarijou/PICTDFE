@@ -1,0 +1,23 @@
+@import '../../../root.scss';
+
+.jogo-categoria{
+  margin: 1.5rem 0 3rem;
+  h4{
+    color: $branco;
+    margin: 0 8rem 1rem;
+    text-transform: uppercase;
+  }
+  .linha-carrossel{
+    height: 2px;
+    background-color: $destaque;
+    margin: 0 8rem 1rem  ;
+  }
+  span{
+    display: none;
+  }
+
+}
+
+
+
+

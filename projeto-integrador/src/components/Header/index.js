@@ -33,7 +33,7 @@ const Header = () => {
                                 </Nav.Link>
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mx-auto">
-                                        <Nav.Link as={Link} to="/">Jogos</Nav.Link>
+                                        <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
                                         <NavDropdown title="Categorias" id="basic-nav-dropdown">
                                             <NavDropdown.Item as={Link} to="/categorias/1">Ação</NavDropdown.Item>
                                             <NavDropdown.Item as={Link} to="/categorias/2">RPG</NavDropdown.Item>
@@ -74,7 +74,7 @@ const Header = () => {
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mx-auto">
-                                        <Nav.Link as={Link} to="/">Jogos</Nav.Link>
+                                        <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
                                         <NavDropdown title="Categorias" id="basic-nav-dropdown">
                                             <NavDropdown.Item as={Link} to="/categorias/1">Ação</NavDropdown.Item>
                                             <NavDropdown.Item as={Link} to="/categorias/2">RPG</NavDropdown.Item>

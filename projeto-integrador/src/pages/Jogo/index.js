@@ -31,7 +31,7 @@ const Jogo = () => {
             </Helmet>
             {jogos[jogoId]
                 ?
-                (<section className="jogo-completo my-4 px-sm-5 px-md-3">
+                (<section className="jogo-completo my-4 px-sm-5 px-md-3 ">
                     <article className="mb-3 mb-md-0 me-md-4 jogo-imagem">
                         <img className="w-100" src={
                             jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {

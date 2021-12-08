@@ -7,7 +7,7 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
     return (
         <>
             <article className="card-jogo">
-                <Link to={`/jogo/${id}`}>
+                <Link to={`/jogos/${id}`}>
                     <img className="mb-2" src={imagem} alt={titulo} />
                 </Link>
                 <div className="mx-3">
