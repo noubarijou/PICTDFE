@@ -1,26 +1,29 @@
-
+@import "../../root.scss";
 
 header {
 
-    /* #Brand{
-    img{
-        &#logo{
-            height: 150px;
-            
+
+    #brand{
+        margin-left: 1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8rem;
+
+        img{
+            margin-right: 0.5rem;
         }
     }
-    align-self: center;
-} */
+
     a {
         text-decoration: none !important;
-        color: white !important;
+        color: $branco !important;
     }
     title {
-        color: white;
+        color: $branco;
     }
 
     #basic-nav-dropdown {
-        color: white;
+        color: $branco;
     }
 
     .dropdown-menu {
@@ -31,5 +34,9 @@ header {
                 background-color: rgba(255, 255, 255, 0.1) !important;
             }
         }
+    }
+
+    #nav-cart{
+        padding-right: 1rem;
     }
 }

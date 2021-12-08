@@ -1,4 +1,3 @@
-import { ShoppingCart } from '@material-ui/icons';
 import React from 'react'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -11,23 +10,22 @@ const Header = () => {
     return (
         <>
             <header>
-                <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+                <Navbar bg="dark" variant="dark" expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="/" id="brand">
+                        <Navbar.Brand href="/" id="brand" className="align-items-center">
                             <img
-                                alt="Cogumelo roxo com bolinhas verdes e olhos de ponta cabeça"
+                                alt="Cogumelo roxo com bolinhas verdes e olhos tonto de ponta cabeça"
                                 src={logo}
-                                height="40"
-                                id="logo"
+                                height="50"
                                 className="d-inline-block align-top"
-                            />{' '}
+                            />
                             Poison games
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mx-auto">
                                 <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
-                                <NavDropdown title="Categorias" id="basic-nav-dropdown" variant="light">
+                                <NavDropdown title="Categorias" id="basic-nav-dropdown">
                                     <NavDropdown.Item as={Link} to="/categorias/1">Ação</NavDropdown.Item>
                                     <NavDropdown.Item as={Link} to="/categorias/2">RPG</NavDropdown.Item>
                                     <NavDropdown.Item as={Link} to="/categorias/3">Estratégia</NavDropdown.Item>
@@ -39,15 +37,14 @@ const Header = () => {
                                 <Nav.Link as={Link} to="/sobre">Sobre</Nav.Link>
                                 <Nav.Link as={Link} to="/suporte">Suporte</Nav.Link>
                             </Nav>
-                            <Nav>
+                            <Nav id="nav-cart">
+                                <Nav.Link title="Carrinho" >
+                                    <CartPlus color="white" size={30} />
+                                </Nav.Link>
                                 <NavDropdown title="Entrar" id="basic-nav-dropdown">
                                     <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
                                     <NavDropdown.Item as={Link} to="/cadastrar">Cadastrar</NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link title="Carrinho" >
-                                    <CartPlus color="white" size={30} />
-
-                                </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
