@@ -2,6 +2,7 @@
 
 .card-jogo {
     width: 100%;
+    color: #ccc;
 
     a {
         img {
@@ -30,11 +31,13 @@
             height: 2rem;
             white-space: nowrap;
             background-color: $branco;
+            border-bottom: 2px solid transparent !important;
             border-radius: 10px;
             border: none;
 
-            &:hover{
+            &:hover {
                 background-color: $destaque;
+                border-bottom: 2px solid white !important;
             }
         }
     }
@@ -44,7 +47,6 @@
         padding: 0.3rem;
         border-radius: 10px;
         font-size: 16px;
-        /* filter: drop-shadow(2px 2px 1px $destaque); */
     }
 }
 

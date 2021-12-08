@@ -44,13 +44,16 @@ const Home = () => {
                 </section>
             </section>
             <section className="jogos align-items-center">
-                {
-                    jogos.filter((item, index) => index < 12).map((jogo, index) => {
-                        return (
-                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
-                        )
-                    })
-                }
+                <section className="entrie-jogos">
+                    {
+                        jogos.map((jogo, index) => {
+                            return (
+                                <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                            )
+                        })
+                    }
+                </section>
+
             </section>
         </>
     )

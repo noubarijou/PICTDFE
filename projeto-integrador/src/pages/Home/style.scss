@@ -1,6 +1,5 @@
 @import "../../root.scss";
 
-
 .parallax {
     display: flex;
     flex-direction: column;
@@ -32,62 +31,51 @@
     }
 
     .recomendados {
-
         .carousel {
             .carousel-inner {
-
                 .carousel-item {
                     text-align: center;
-                    // display: flex;
-                    // justify-content: center;
+                    background: rgb(0, 0, 0);
+                    background: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 85%);
 
                     .card-jogo {
                         text-align: left;
                         display: inline-block;
+                        border-radius: 5px;
+                        overflow: hidden;
                     }
                 }
-
-                
             }
 
             .carousel-indicators {
                 bottom: -30px;
             }
         }
-
-
-
-
-
-        // text-align: center;
-
-        // .react-multi-carousel-list {
-        //     .react-multi-carousel-track {
-        //         li {
-        //             img {
-        //                 width: 100%;
-        //                 border: solid 1px $destaque;
-        //             }
-        //             p {
-        //                 text-align: left;
-        //             }
-        //         }
-        //     }
-        // }
     }
 }
 
 .jogos {
-    color: $branco;
-    margin: 1rem;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
 
-    .card-jogo{
-        &:hover{
-            background-color: #130020;
+    .entrie-jogos {
+        color: $branco;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .card-jogo {
+            border-bottom: 1px solid transparent;
+            border-radius: 5px;
+            padding-bottom: 0.5rem;
+            overflow: hidden;
+
+            &:hover {
+                background-color: #130020;
+                border-bottom: 1px solid $destaque;
+            }
         }
     }
 }
@@ -107,14 +95,18 @@ $screen-xl-min: 1200px;
 // Small devices
 @media (min-width: $screen-sm-min) {
     .jogos {
-        flex-direction: row;
-        flex-wrap: wrap;
+        .entrie-jogos {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 }
 
 //Large tables
 @media (min-width: $screen-xl-min) {
-    // .jogos {
-    //     width: calc($screen-xl-min - 24px * 2);
-    // }
+    .jogos {
+        .entrie-jogos {
+            width: calc($screen-xl-min - 16px * 2);
+        }
+    }
 }

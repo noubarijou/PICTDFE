@@ -25,22 +25,22 @@ const Footer = () => {
                             <div id="midiasSociais">
                                 <ul className="list-unstyled">
                                     <li>
-                                        <a class="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="#!">
                                             <Instagram color="white" size={25} />
                                         </a>
-                                        <a class="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="#!">
                                             <Facebook color="white" size={25} />
                                         </a>
-                                        <a class="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="#!">
                                             <Twitch color="white" size={25} />
                                         </a>
-                                        <a class="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="#!">
                                             <Discord color="white" size={25} />
                                         </a>
-                                        <a class="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="#!">
                                             <Twitter color="white" size={25} />
                                         </a>
-                                        <a class="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="#!">
                                             <Youtube color="white" size={25} />
                                         </a>
                                     </li>
