@@ -39,12 +39,12 @@ const Cadastro = () => {
           <Form className="form">
           <div>
             <label htmlFor="nomecompleto">Nome completo</label>
-            <Field name="nomecompleto" />
+            <Field name="nomecompleto" placeholder="Bota teu nome completo"/>
             <p className="error"><ErrorMessage name="nomecompleto" /></p>
           </div>
           <div>
               <label htmlFor="email">Email*</label>
-              <Field name="email" />
+              <Field name="email" placeholder="teu email" type="email" />
               <p className="error">
                 <ErrorMessage name="email" />
               </p>
@@ -56,14 +56,14 @@ const Cadastro = () => {
             </div>
             <div>
               <label htmlFor="senha">Defina a senha*</label>
-              <Field type="senha" name="senha" />
+              <Field type="password" name="senha" />
               <p className="error">
                 <ErrorMessage name="senha" />
               </p>
             </div>
             <div>
               <label htmlFor="senhaconfirma">Confirme a senha*</label>
-              <Field type="senha" name="senhaconfirma" />
+              <Field type="password" name="senhaconfirma" />
               <p className="error">
                 <ErrorMessage name="senhaconfirma" />
               </p>
@@ -75,7 +75,6 @@ const Cadastro = () => {
           </Form>
           )}
         </Formik>
-          
       </Container>
       
 
