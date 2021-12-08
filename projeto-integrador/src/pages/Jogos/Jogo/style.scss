@@ -99,8 +99,12 @@ $screen-xl-min: 1200px;
 
 @media (min-width: $screen-xl-min) {
     .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
         .jogo-completo {
-            width: $screen-xl-min;
+            width: calc($screen-xl-min - 50px);
             .jogo-imagem {
                 img {
                     width: 700px !important;

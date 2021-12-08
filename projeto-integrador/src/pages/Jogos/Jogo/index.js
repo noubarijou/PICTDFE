@@ -21,7 +21,7 @@ const Jogo = () => {
     }, [jogoId])
 
     return (
-        <div className="content py-4">
+        <div className="content py-4 px-sm-5 px-md-5">
             <Helmet>
                 <title>{`Poison Games | ${jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
                     return (
@@ -31,7 +31,7 @@ const Jogo = () => {
             </Helmet>
             {jogos[jogoId]
                 ?
-                (<section className="jogo-completo px-sm-5 px-md-5">
+                (<section className="jogo-completo">
                     <article className="mb-3 mb-md-0 me-md-4 jogo-imagem">
                         <img className="w-100" src={
                             jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
