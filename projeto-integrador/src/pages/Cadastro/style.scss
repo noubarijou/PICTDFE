@@ -15,39 +15,50 @@
         height: 3px;
         background-color: $destaque;
     }
-    .form-cadastro {
+    .form{
+        padding-top: 1rem;
         display: flex;
+        justify-content: center;
         flex-direction: column;
-    }
-    p {
-        font-size: 10px;
-        padding-left: 0.3rem;
-    }
-    .submit {
-        background: $destaque;
-        border-radius: 20px;
-        margin: 0 auto;
-    }
-    .input-field {
-        padding: 0 0.3rem;
-        background: $bg-input;
-        border-radius: 20px;
-        border: none;
-        color: $branco;
-        &::placeholder {
-            color: $branco;
+        div{
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            width: 40%;
+            p {
+                font-size: 10px;
+                padding-left: 0.3rem;
+            }
+            .input-field {
+                padding: 0 0.3rem;
+                background: $bg-input;
+                border-radius: 20px;
+                border: none;
+                color: $branco;
+                &::placeholder {
+                    color: $branco;
+                }
+                display: block;
+            }
+            label {
+                padding-left: 0.3rem;
+            }
         }
-        display: block;
-    }
-    label {
-        padding-left: 0.3rem;
-    }
-    .criarconta {
-        .linklogin {
-            color: $destaque;
-            text-decoration: none;
+        .submit {
+            background: $destaque;
+            border-radius: 20px;
+            border: none;
+            font-weight: 700;
+            width: 10%;
+            margin: 1rem auto;
         }
-        text-align: center;
-        margin: 0 auto;
+        .criarconta {
+            margin-top: 1rem;
+            .linklogin {
+                color: $destaque;
+                text-decoration: none;
+            }
+            text-align: center;
+        }
     }
 }

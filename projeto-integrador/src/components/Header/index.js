@@ -90,7 +90,7 @@ const Header = () => {
                                     <Nav id="nav-cart">
                                         <NavDropdown title="Entrar" id="basic-nav-dropdown">
                                             <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/cadastrar">Cadastrar</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/cadastro">Cadastrar</NavDropdown.Item>
                                         </NavDropdown>
                                         <Nav.Link as={Link} to="/carrinho" title="Carrinho" >
                                             <CartPlus color="white" size={30} />
