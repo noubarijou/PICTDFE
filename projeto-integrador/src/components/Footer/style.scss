@@ -40,4 +40,52 @@
   
 
 }
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small tablets and large smartphones (landscape view)
+@media (max-width: $screen-sm-min) {
+  #footer{
+    .row{
+      justify-content:center;
+      align-items: center;
+      article{
+        width: 50%;
+        justify-content:center !important;
+        img{
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+// Small tablets and large smartphones (landscape view)
+@media (min-width: $screen-sm-min) {
+
+}
+
+// Small tablets (portrait view)
+@media (min-width: $screen-md-min) {
+    
+}
+
+// Tablets and small desktops
+@media (min-width: $screen-lg-min) {
+    
+}
+
+@media (min-width: $screen-xl-min) {
+    
+}
+
 
