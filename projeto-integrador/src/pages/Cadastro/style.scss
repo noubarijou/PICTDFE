@@ -1,8 +1,8 @@
 @import "../../root.scss";
 
 #cadastro {
-    color: white;
-    background: rgba(31, 35, 38, 0.5);
+    color: $branco;
+    background: $bg-card;
     width: 80%;
     margin: 3rem auto;
     padding: 3rem;
@@ -57,7 +57,7 @@
             font-weight: 700;
             margin: 1rem auto;
         }
-        .criarconta {
+        .contacriada {
             margin-top: 1rem;
             .linklogin {
                 color: $destaque;

@@ -39,21 +39,21 @@ const Suporte = () => {
           <Form className="form">
             <div>
               <label htmlFor="nomecompleto">Nome Completo</label>
-              <Field name="nomecompleto" placeholder="Bota teu nome completo" />
+              <Field className="input-field" name="nomecompleto" placeholder="Bota teu nome completo" />
               <p className="error">
                 <ErrorMessage name="nomecompleto" />
               </p>
             </div>
             <div>
               <label htmlFor="email">Email</label>
-              <Field name="email" placeholder="teu email" type="email" />
+              <Field className="input-field" name="email" placeholder="teu email" type="email" />
               <p className="error">
                 <ErrorMessage name="email" />
               </p>
             </div>
             <div>
               <label htmlFor="mensagem">Manda tua msg</label>
-              <Field
+              <Field className="input-field"
                 component="textarea"
                 rows = "5"
                 name="mensagem"

@@ -14,14 +14,48 @@
         height: 3px;
         background-color: $destaque;
     }
-    p {
-        text-align: justify;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .submit {
-        background: #FFDF38;
-        border-radius: 20px;
-
+    .form{
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        div{
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            p {
+                font-size: 10px;
+                padding-left: 0.3rem;
+            }
+            .input-field {
+                padding: 0 0.3rem;
+                background: $bg-input;
+                border-radius: 20px;
+                border: none;
+                color: $branco;
+                display: block;
+                &::placeholder {
+                    color: $branco;
+                }
+                &[type=date]{
+                    padding: 0 0.5rem;
+                    &::-webkit-calendar-picker-indicator {
+                        color: $branco;
+                        filter: invert(1);
+                    }
+                }
+            }
+            label {
+                padding-left: 0.3rem;
+            }
+        }
+        .submit {
+            background: $destaque;
+            border-radius: 20px;
+            border: none;
+            font-weight: 700;
+            margin: 1rem auto;
+        }
+        
     }
 }

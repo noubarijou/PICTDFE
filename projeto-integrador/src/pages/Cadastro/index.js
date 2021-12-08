@@ -76,7 +76,7 @@ const Cadastro = () => {
                 <button className="submit" type="submit">
                   Cadastrar
                 </button>
-                <p className="criarconta"> Já tem conta? <Link className="linklogin" to="/login">Entre por aqui!</Link></p>
+                <p className="contacriada"> Já tem conta? <Link className="linklogin" to="/login">Entre por aqui!</Link></p>
               </Form>
             </>
           )}

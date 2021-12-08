@@ -1,100 +1,76 @@
 import { useState } from "react";
-import { TextField, InputAdornment, IconButton } from "@material-ui/core";
-import { Person, Lock } from "@material-ui/icons";
-import { useFormik } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import {Container} from 'react-bootstrap';
-import {Helmet} from 'react-helmet';
-import {Link} from 'react-router-dom';
-import {useNavigate} from 'react-router';
-import './style.scss';
-import useStyles from './style';
-
+import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
+import "./style.scss";
 
 const Login = () => {
-  const classes = useStyles();
-    const navigate = useNavigate();
-    const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
-    const formik = useFormik({
-        initialValues: {
-            email: '',
-            password: '',
-        },
-        validationSchema: Yup.object({
-            email: Yup.string()
-            .email('bota um email de verdade...')
-            .required('tem que botá um email...'),
-            password: Yup.string()
-            .min(5, 'pelo menos 5 bagulhinho...')
-            .required('tem que botá uma senha'),
-        }),
-        onSubmit: (values) => {
-            console.log(values);
-            setIsSubmitSuccess(true)
-        },
-    }); 
+  const navigate = useNavigate();
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
+  const validationSchema = Yup.object({
+    email: Yup.string()
+      .email("bota um email de verdade...")
+      .required("tem que botá um email..."),
+    senha: Yup.string()
+      .min(8, "pelo menos 8 bagulhinho...")
+      .required("tem que botá uma senha"),
+  });
   return (
     <>
       <Helmet>
         <title>Poison Games | Login</title>
       </Helmet>
       <Container id="login">
+        <Formik
+          initialValues={{
+            email: "",
+            senha: "",
+          }}
+          validationSchema={validationSchema}
+          onSubmit={(values) => {
+            console.log(values);
+            setIsSubmitSuccess(true);
+          }}
+        >
           {isSubmitSuccess ? (
-              navigate('/')
+            navigate("/")
           ) : (
-      <form onSubmit={formik.handleSubmit}>
-            <h1>Login</h1>
-            <div className="linha mb-4"></div>
-            <TextField
-              name="email"
-              type="text"
-              color="success"
-              placeholder="Email"
-              className={classes.textField}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment>
-                    <IconButton>
-                      <Person />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-            />
-
-            {formik.touched.email && formik.errors.email ? (
-              <div className="error_msg">{formik.errors.email}</div>
-            ) : null}
-
-            <TextField
-              name="password"
-              type="password"
-              placeholder="senha"
-              className="textField"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment>
-                    <IconButton>
-                      <Lock />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.password}
-            />
-            {formik.touched.password && formik.errors.password ? (
-              <div className="error_msg">{formik.errors.password}</div>
-            ) : null}
-
-            <button type="submit" className="submit">Entrar</button>
-            <h5> Não tem conta? <Link to="/cadastro">Crie uma!</Link></h5>
-          </form>
+            <>
+              <h1>Login</h1>
+              <div className="linha mb-4"></div>
+              <Form className="form">
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <Field
+                    className="input-field"
+                    name="email"
+                    placeholder="teu email"
+                    type="email"
+                  />
+                  <p className="error">
+                    <ErrorMessage name="email" />
+                  </p>
+                </div>
+                <div>
+                  <label htmlFor="senha">Defina a senha</label>
+                  <Field className="input-field" type="password" name="senha" />
+                  <p className="error">
+                    <ErrorMessage name="senha" />
+                  </p>
+                </div>
+                <button type="submit" className="submit">
+                  Entrar
+                </button>
+                <p className="criarconta">
+                  Não tem conta? <Link className="linkcadastro" to="/cadastro">Crie uma!</Link>
+                </p>
+              </Form>
+            </>
           )}
+        </Formik>
       </Container>
     </>
   );
