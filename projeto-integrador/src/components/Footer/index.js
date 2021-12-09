@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../assets/img/logo-poison-modelo1.png';
 import { Facebook, Discord, Instagram, Twitch, Twitter, Youtube } from 'react-bootstrap-icons';
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -53,24 +54,22 @@ const Footer = () => {
                         <article id="col3" className="col-md-3 col-sm-6 d-none d-md-flex">
 
                             <ul className="list-unstyled">
-                                <li><h6>CATEGORIAS</h6></li>
-                                <li>AÇÃO</li>
-                                <li>RPG</li>
-                                <li>ESTRATÉGIA</li>
-                                <li>AVENTURA</li>
-                                <li>SIMULADOR</li>
-                                <li>ESPORTE</li>
-                                <li>CORRIDA</li>
+                                <li><Link to="/jogos"><h6>CATEGORIAS</h6></Link></li>
+                                <li><Link to="/categoria/1">AÇÃO</Link></li>
+                                <li><Link to="/categoria/2">RPG</Link></li>
+                                <li><Link to="/categoria/3">ESTRATÉGIA</Link></li>
+                                <li><Link to="/categoria/4">AVENTURA</Link></li>
+                                <li><Link to="/categoria/5">SIMULADOR</Link></li>
+                                <li><Link to="/categoria/6">ESPORTE</Link></li>
+                                <li><Link to="/categoria/7">CORRIDA</Link></li>
                             </ul>
                         </article>
                         {/* coluna 4 */}
                         <article id="col4" className="col-md-3 col-sm-6">
                             <ul className="list-unstyled">
-                                <li><h6>SOBRE</h6></li>
-                                <li><h6>SUPORTE</h6></li>
-                                <li><h6>MINHA CONTA</h6></li>
-                                <li><h6>JOGOS</h6></li>
-
+                                <li><Link to="/sobre"><h6>SOBRE</h6></Link></li>
+                                <li><Link to="/suporte"><h6>SUPORTE</h6></Link></li>
+                                <li><Link to="/jogos"><h6>JOGOS</h6></Link></li>
                             </ul>
                         </article>
 
