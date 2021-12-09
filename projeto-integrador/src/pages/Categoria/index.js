@@ -23,7 +23,7 @@ const Categoria = () => {
         <title>Poison Games | Categorias</title>
       </Helmet>
 
-      {categoria ?
+      {categorias[0] ?
         (
           <section className="jogos align-items-center">
             <section className="entrie-jogos">

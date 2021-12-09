@@ -6,6 +6,7 @@ import { CartPlus } from 'react-bootstrap-icons';
 import { Spinner } from 'react-bootstrap';
 
 import './style.scss';
+import BotaoComprar from '../../../components/BotaoComprar';
 
 const Jogo = () => {
 
@@ -60,13 +61,17 @@ const Jogo = () => {
                                 )
                             })}
                         </p>
-                        <button className="fw-bold">
+                        <BotaoComprar preco={jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
+                                return (
+                                    `${e.preco}`
+                                )})} />
+                        {/* <button className="fw-bold">
                             <CartPlus color="black" size={16} />R$ {jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
                                 return (
                                     `${e.preco}`.includes(".") ? `${e.preco}`.replace('.', ',') : `${e.preco},00`
                                 )
                             })}
-                        </button>
+                        </button> */}
                     </article>
                 </section>)
                 :

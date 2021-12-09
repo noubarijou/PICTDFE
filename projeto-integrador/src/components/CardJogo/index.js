@@ -1,6 +1,7 @@
 // import React from 'react';
 import { CartPlus } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
+import BotaoComprar from '../BotaoComprar';
 import './style.scss';
 
 const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
@@ -14,9 +15,7 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
                 </Link>
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>
-                    <button className="fw-bold">
-                        <CartPlus color="black" size={16} />R$ {`${preco}`.includes(".") ? `${preco}`.replace('.', ',') : `${preco},00`}
-                    </button>
+                    <BotaoComprar preco={preco}/>
                 </div>
                 <span>{categoria}</span>
             </article>

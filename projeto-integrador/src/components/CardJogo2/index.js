@@ -1,4 +1,5 @@
 
+import BotaoComprar from '../BotaoComprar';
 import './style.scss';
 
 const CardJogo2 = ({ id, titulo, imagem, categoria, preco, descricao }) => {
@@ -14,6 +15,7 @@ const CardJogo2 = ({ id, titulo, imagem, categoria, preco, descricao }) => {
               <h5 className="card-title">{titulo}</h5>
               <p className="card-text">{descricao}</p>
             </div>
+            <BotaoComprar />
           </div>
         </div>
       </div>
