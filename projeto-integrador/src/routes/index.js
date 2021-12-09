@@ -9,6 +9,7 @@ import Cadastro from '../pages/Cadastro';
 import Jogo from '../pages/Jogos/Jogo';
 import Jogos from '../pages/Jogos';
 import Suporte from '../pages/Suporte';
+import Categoria from '../pages/Categoria'
 
 
 
@@ -19,6 +20,7 @@ const RouteList = () => (
       <Route path="/" element={<Home />} />
       <Route path="/jogos/:jogoId" element={<Jogo />} />
       <Route path="/jogos" element={<Jogos />} />
+      <Route path="/categoria/:categoriaId" element={<Categoria />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/login" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />

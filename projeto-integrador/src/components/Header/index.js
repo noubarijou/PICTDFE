@@ -35,13 +35,13 @@ const Header = () => {
                                     <Nav className="mx-auto">
                                         <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
                                         <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                                            <NavDropdown.Item as={Link} to="/categorias/1">Ação</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/2">RPG</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/3">Estratégia</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/4">Aventura</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/5">Simulador</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/6">Esporte</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/7">Corrida</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/1">Ação</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/2">RPG</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/3">Estratégia</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/4">Aventura</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/5">Simulador</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/6">Esporte</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/7">Corrida</NavDropdown.Item>
                                         </NavDropdown>
                                         <Nav.Link as={Link} to="/sobre">Sobre</Nav.Link>
                                         <Nav.Link as={Link} to="/suporte">Suporte</Nav.Link>
@@ -76,13 +76,13 @@ const Header = () => {
                                     <Nav className="mx-auto">
                                         <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
                                         <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                                            <NavDropdown.Item as={Link} to="/categorias/1">Ação</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/2">RPG</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/3">Estratégia</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/4">Aventura</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/5">Simulador</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/6">Esporte</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/categorias/7">Corrida</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/1">Ação</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/2">RPG</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/3">Estratégia</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/4">Aventura</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/5">Simulador</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/6">Esporte</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/categoria/7">Corrida</NavDropdown.Item>
                                         </NavDropdown>
                                         <Nav.Link as={Link} to="/sobre">Sobre</Nav.Link>
                                         <Nav.Link as={Link} to="/suporte">Suporte</Nav.Link>
