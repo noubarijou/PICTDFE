@@ -8,7 +8,9 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
         <>
             <article className="card-jogo">
                 <Link to={`/jogos/${id}`}>
-                    <img className="mb-2" src={imagem} alt={titulo} />
+                    <div>
+                        <img className="mb-2" src={imagem} alt={titulo} />
+                    </div>
                 </Link>
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>

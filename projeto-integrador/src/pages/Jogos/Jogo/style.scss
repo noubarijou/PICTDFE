@@ -18,8 +18,9 @@
             }
 
             button {
+                display: flex;
                 gap: 0.5rem;
-                align-self: center;
+                align-items: center;
                 height: 2rem;
                 white-space: nowrap;
                 background-color: $destaque;
@@ -51,7 +52,7 @@ $screen-xl-min: 1200px;
 // Small tablets and large smartphones (landscape view)
 @media (min-width: $screen-sm-min) {
     .content {
-        min-height: calc(100vh - 243px - 40px - 76px);
+        min-height: calc(100vh - 220.5px - 40px - 76px);
         .jogo-completo {
             .jogo-imagem {
                 text-align: center;

@@ -1,56 +1,76 @@
 @import "../../root.scss";
 
-.parallax {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    justify-content: center;
+.video-parallax {
+    position: relative;
     width: 100%;
     height: calc(100vh - 76px);
-    background-size: cover;
-    background-image: url(../../assets/img/mine.gif);
-    background-attachment: fixed;
-    background-position: center;
+    overflow: hidden;
 
-    color: $branco;
+    .parallax {
+        position: absolute;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        justify-content: center;
+        width: 100%;
+        height: calc(100vh - 76px);
+        // background-size: cover;
+        // background-image: url(../../assets/img/mine.gif);
+        // background-attachment: fixed;
+        // background-position: center;
 
-    .apresentacao {
-        margin: 0 2rem;
+        .apresentacao {
+            margin: 0 2rem;
 
-        h2,
-        a {
-            text-decoration: none;
+            h1,
+            a {
+                text-decoration: none;
+                color: black;
+                filter: drop-shadow(1px 1px 1px $destaque);
+            }
+
+            a {
+                button {
+                    font-weight: bold;
+                    color: $branco;
+                }
+            }
         }
 
-        a {
-            button {
-                font-weight: bold;
-                color: $branco;
+        .recomendados {
+            .carousel {
+                .carousel-inner {
+                    .carousel-item {
+                        text-align: center;
+                        background: rgb(0, 0, 0);
+                        background: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 85%);
+
+                        .card-jogo {
+                            border-bottom: 1px solid transparent;
+                            padding-bottom: 0.5rem;
+                            text-align: left;
+                            display: inline-block;
+                            max-width: 330px;
+                        }
+                    }
+                }
+
+                .carousel-indicators {
+                    bottom: -30px;
+                }
             }
         }
     }
 
-    .recomendados {
-        .carousel {
-            .carousel-inner {
-                .carousel-item {
-                    text-align: center;
-                    background: rgb(0, 0, 0);
-                    background: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 85%);
-
-                    .card-jogo {
-                        text-align: left;
-                        display: inline-block;
-                        border-radius: 5px;
-                        overflow: hidden;
-                    }
-                }
-            }
-
-            .carousel-indicators {
-                bottom: -30px;
-            }
-        }
+    video {
+        position: absolute;
+        top: -65px;
+        z-index: -1;
+        height: 100%;
+        width: 177.77777778vh; /* 100 * 16 / 9 */
+        min-width: 100%;
+        min-height: 59vw; /* 100 * 9 / 16 */
     }
 }
 
@@ -80,24 +100,52 @@
     }
 }
 
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
 // Small devices
 @media (min-width: $screen-sm-min) {
     .jogos {
         .entrie-jogos {
             flex-direction: row;
             flex-wrap: wrap;
+            width: calc($screen-sm-min + 100px);
+
+            .card-jogo {
+                a {
+                    div {
+                        img {
+                            max-height: 130px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small tablets (portrait view)
+@media (min-width: $screen-md-min) {
+    .jogos {
+        .entrie-jogos {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: calc($screen-md-min - 100px);
+
+            .card-jogo {
+                a {
+                    div {
+                        img {
+                            max-height: 130px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablets and small desktops
+@media (min-width: $screen-lg-min) {
+    .jogos {
+        .entrie-jogos {
+            width: calc($screen-lg-min - 16px * 2);
         }
     }
 }
@@ -110,3 +158,16 @@ $screen-xl-min: 1200px;
         }
     }
 }
+
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

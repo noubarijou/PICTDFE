@@ -1,0 +1,24 @@
+@import '../../root.scss';
+
+#jogos-categoria {
+    display: flex;
+    justify-content: center;
+}
+
+// Small devices
+@media (min-width: $screen-sm-min) {
+    #jogos-categoria {
+        .entrie-jogos {
+            width: calc($screen-sm-min + 100px);
+        }
+    }
+}
+
+//Large tables
+@media (min-width: $screen-xl-min) {
+    #jogos-categoria {
+        .entrie-jogos {
+            width: calc($screen-xl-min - 16px * 2);
+        }
+    }
+}

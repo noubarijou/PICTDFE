@@ -15,10 +15,6 @@
     margin: 0 8rem 1rem;
   }
 
-  > span {
-    display: none;
-  }
-
   .carousel {
     .carousel-inner {
       .carousel-item {
@@ -31,6 +27,10 @@
           display: inline-block;
           border-radius: 5px;
           overflow: hidden;
+          
+          span {
+            display: none;
+          }
         }
       }
     }

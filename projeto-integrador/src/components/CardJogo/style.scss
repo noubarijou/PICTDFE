@@ -1,18 +1,26 @@
 @import "../../root.scss";
 
 .card-jogo {
-    width: 100%;
+    width: 300px;
     color: #ccc;
+    overflow: hidden;
+    border-radius: 5px;
 
     a {
-        img {
-            position: relative;
-            top: 0;
-            width: 100%;
+        div {
+            overflow: hidden;
+            max-height: 160px;
+            margin-bottom: 0.5rem;
+            img {
+                position: relative;
+                top: 0;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 
-    div {
+    > div {
         display: flex;
         justify-content: space-between;
         gap: 1rem;

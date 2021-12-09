@@ -12,8 +12,8 @@ const Jogos = () => {
       <Helmet>
         <title>Poison Games | Jogos</title>
       </Helmet>
-      <section>
-        <section className="Jogos">
+      <section id="jogos-categoria">
+        <section className="entrie-jogos">
           {jogos[0] ?
             (jogos.map((e, index) => {
               return (
