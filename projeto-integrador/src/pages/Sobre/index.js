@@ -47,7 +47,7 @@ const Sobre = () => (
                     <img src={integrante.githubImg} alt="GitHub personalizado com o rosto de cada integrante" />
                   </a>
                   <a href={integrante.linkedin} target="_blank" rel="noreferrer">
-                    <Linkedin color="white" size={40} />
+                    <Linkedin color="white" size={60} />
                   </a>
                 </div>
               </div>
