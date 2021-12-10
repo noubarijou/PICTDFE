@@ -31,7 +31,7 @@ const Home = () => {
                     <div className="video-parallax">
                         <section className="parallax transbox">
                             <article className="apresentacao text-center mx-4">
-                                <h1>A melhor loja de games da sua rua</h1>
+                                <h1>Fortalece a firma aí, compra de nóis</h1>
                             </article>
                             <section className="recomendados">
                                 {

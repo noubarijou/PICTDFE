@@ -1,8 +1,6 @@
 @import "../../root.scss";
 
 header {
-
-
     #brand{
         margin-left: 1rem;
         text-transform: uppercase;
@@ -38,5 +36,15 @@ header {
 
     #nav-cart{
         padding-right: 1rem;
+    }
+
+    #button-carrinho {
+        position: relative;
+        padding: 0 !important;
+
+        span {
+            color: black;
+            background-color: $destaque;
+        }
     }
 }

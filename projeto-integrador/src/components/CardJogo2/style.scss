@@ -1,0 +1,18 @@
+@import '../../root.scss';
+
+button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    height: 2rem;
+    white-space: nowrap;
+    background-color: $branco;
+    border-bottom: 2px solid transparent !important;
+    border-radius: 10px;
+    border: none;
+
+    &:hover {
+        background-color: $destaque;
+        border-bottom: 2px solid $branco !important;
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../root.scss';
+
+.devolver {
+    background-color: $destaque !important;
+    min-width: 100px;
+    justify-content: center;
+
+    p {
+        display: none;
+    }
+}

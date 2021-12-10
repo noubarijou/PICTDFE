@@ -17,10 +17,12 @@ const Categoria = () => {
     window.scrollTo(0, 0)
   }, [categoriaId]);
 
+  console.log();
+
   return (
     <>
       <Helmet>
-        <title>Poison Games | Categorias</title>
+        <title>{`Poison Games | ${categorias[0] ? categorias.filter((item, index) => item.id === parseInt(categoria))[0].nome : ''}`}</title>
       </Helmet>
 
       {categorias[0] ?

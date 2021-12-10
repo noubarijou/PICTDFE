@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo-poison-modelo1.png'
 import './style.scss'
-import { CartPlus } from 'react-bootstrap-icons';
+import { Cart } from 'react-bootstrap-icons';
 import useWindowDimensions from '../../Hooks/useWindowDimensions';
+import { CarrinhoContext } from '../../context/jogoContext';
 
 
 const Header = () => {
+    const { carrinho, addJogo, rmJogo } = useContext(CarrinhoContext);
+
 
     const { height, width } = useWindowDimensions();
 
-    console.log(width);
     return (
         <>
-            <header>
+            <header className="sticky-top">
                 {
                     width < 992 ?
                         <Navbar bg="dark" variant="dark" expand="lg">
@@ -28,9 +30,12 @@ const Header = () => {
                                         className="d-inline-block align-top"
                                     />
                                 </Navbar.Brand>
-                                <Nav.Link as={Link} to="/carrinho" title="Carrinho" >
-                                    <CartPlus color="white" size={30} />
-                                </Nav.Link>
+                                <button type="button" id="button-carrinho" class="btn position-relative">
+                                    <Cart color="white" size={30} />
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                        {carrinho.length}
+                                    </span>
+                                </button>
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mx-auto">
                                         <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
@@ -92,9 +97,12 @@ const Header = () => {
                                             <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
                                             <NavDropdown.Item as={Link} to="/cadastro">Cadastrar</NavDropdown.Item>
                                         </NavDropdown>
-                                        <Nav.Link as={Link} to="/carrinho" title="Carrinho" >
-                                            <CartPlus color="white" size={30} />
-                                        </Nav.Link>
+                                        <button type="button" id="button-carrinho" class="btn position-relative">
+                                            <Cart color="white" size={30} />
+                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                                {carrinho.length}
+                                            </span>
+                                        </button>
                                     </Nav>
                                 </Navbar.Collapse>
                             </Container>

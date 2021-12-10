@@ -16,19 +16,19 @@ import JogoContextProvider from '../context/jogoContext';
 
 const RouteList = () => (
   <BrowserRouter>
-  <JogoContextProvider>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/jogos/:jogoId" element={<Jogo />} />
-      <Route path="/jogos" element={<Jogos />} />
-      <Route path="/categoria/:categoriaId" element={<Categoria />} />
-      <Route path="/sobre" element={<Sobre />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/cadastro" element={<Cadastro />} />
-      <Route path="/suporte" element={<Suporte />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <JogoContextProvider>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jogos/:jogoId" element={<Jogo />} />
+        <Route path="/jogos" element={<Jogos />} />
+        <Route path="/categoria/:categoriaId" element={<Categoria />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/suporte" element={<Suporte />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </JogoContextProvider>
     <Footer />
   </BrowserRouter>
