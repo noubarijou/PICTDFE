@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Helmet } from "react-helmet";
 import CardJogo2 from "../../components/CardJogo2";
 import useAxios from "../../Hooks/useAxios";
@@ -9,37 +9,35 @@ import './style.scss';
 
 
 const Categoria = () => {
-
-  const categorias = useAxios(`/categoria`)
-  const [categoria, setCategoria] = useState();
   const { categoriaId } = useParams();
-  useEffect(() => {
-    setCategoria(categoriaId)
-    window.scrollTo(0, 0)
-  }, [categoriaId]);
 
-  console.log();
+  const categoria = useAxios(`/categoria/${categoriaId}`)
+
+  const [jogos, setJogos] = useState();
+
+  useEffect(() => {
+    setJogos(categoria.produtos)
+    window.scrollTo(0, 0)
+  }, [categoriaId, categoria]);
 
   return (
     <>
       <Helmet>
-        <title>{`Poison Games | ${categorias[0] ? categorias.filter((item, index) => item.id === parseInt(categoria))[0].nome : ''}`}</title>
+        <title>{`Poison Games | ${jogos ? categoria.nome : ''}`}</title>
       </Helmet>
 
       <div className="linha-carrossel"></div>
 
-      {categorias[0] ?
+      {jogos !== undefined ?
         (
           <section className="jogos align-items-center">
             <section className="entrie-jogos">
               {
-                categorias.filter((item, index) => item.id === parseInt(categoria)).map((e) => {
+                jogos.length !== 0 &&
+                jogos !== undefined && jogos.sort((a, b) => a.id - b.id).map((jogo, index) => {
                   return (
-                    e.produtos.map((jogo, index) => {
-                      return (
-                        <CardJogo2 key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} />
-                      )
-                    })
+                    <CardJogo2 key={jogo.id} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} />
+
                   )
                 })
               }

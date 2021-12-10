@@ -30,9 +30,9 @@ const Header = () => {
                                         className="d-inline-block align-top"
                                     />
                                 </Navbar.Brand>
-                                <button type="button" id="button-carrinho" class="btn position-relative">
+                                <button type="button" id="button-carrinho" className="btn position-relative">
                                     <Cart color="white" size={30} />
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
                                         {carrinho.length}
                                     </span>
                                 </button>
@@ -97,9 +97,9 @@ const Header = () => {
                                             <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
                                             <NavDropdown.Item as={Link} to="/cadastro">Cadastrar</NavDropdown.Item>
                                         </NavDropdown>
-                                        <button type="button" id="button-carrinho" class="btn position-relative">
+                                        <button type="button" id="button-carrinho" className="btn position-relative">
                                             <Cart color="white" size={30} />
-                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
                                                 {carrinho.length}
                                             </span>
                                         </button>
