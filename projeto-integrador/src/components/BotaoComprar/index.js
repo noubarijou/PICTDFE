@@ -14,7 +14,7 @@ const BotaoComprar = ({ preco, id, jogo }) => {
 
           ?
 
-          <button className="fw-bold devolver" onClick={() => rmJogo({ id })}>
+          <button className="btn-compra fw-bold devolver" onClick={() => rmJogo({ id })}>
             <CartDash color="black" size={16} />
             <p>
               R$ {" "}
@@ -26,7 +26,7 @@ const BotaoComprar = ({ preco, id, jogo }) => {
 
           :
 
-          <button className="fw-bold comprar" onClick={() => addJogo({ id })}>
+          <button className="btn-compra fw-bold comprar" onClick={() => addJogo({ id })}>
             <CartPlus color="black" size={16} />
             R$ {" "}
             {`${preco}`.includes(".")

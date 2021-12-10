@@ -36,7 +36,7 @@ const Categoria = () => {
                 jogos.length !== 0 &&
                 jogos !== undefined && jogos.sort((a, b) => a.id - b.id).map((jogo, index) => {
                   return (
-                    <CardJogo2 key={jogo.id} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} />
+                    <CardJogo2 key={jogo.id} id={jogo.id} titulo={jogo.titulo} descricao={jogo.descricao} imagem={jogo.imagem} preco={jogo.preco} />
 
                   )
                 })
