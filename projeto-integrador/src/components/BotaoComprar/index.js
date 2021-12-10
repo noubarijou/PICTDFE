@@ -4,7 +4,7 @@ import { CarrinhoContext } from '../../context/jogoContext';
 import { CarrinhoState } from "../../context/jogoContext";
 import './style.scss'
 
-const BotaoComprar = ({ preco, id, jogo }) => {
+const BotaoComprar = ({ preco, id}) => {
   const { carrinho, addJogo, rmJogo } = useContext(CarrinhoContext)
 
   return (

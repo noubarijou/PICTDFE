@@ -11,6 +11,7 @@ import Jogos from '../pages/Jogos';
 import Suporte from '../pages/Suporte';
 import Categoria from '../pages/Categoria'
 import JogoContextProvider from '../context/jogoContext';
+import Carrinho from '../pages/Carrinho';
 
 
 
@@ -27,6 +28,7 @@ const RouteList = () => (
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/suporte" element={<Suporte />} />
+        <Route path="/carrinho" element={<Carrinho />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </JogoContextProvider>

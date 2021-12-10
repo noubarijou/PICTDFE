@@ -1,12 +1,10 @@
-// import React from 'react';
-import { Link } from "react-router-dom";
-import BotaoComprar from '../BotaoComprar';
+import {Link} from 'react-router-dom';
 import './style.scss';
 
-const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
+const PrecoNoCarrinho = ({id, imagem, titulo, preco, categoria}) => {
     return (
         <>
-            <article className="card-jogo">
+            <article className="card-jogo-carrinho">
                 <Link to={`/jogos/${id}`}>
                     <div>
                         <img className="mb-2" src={imagem} alt={titulo} />
@@ -14,7 +12,10 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
                 </Link>
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>
-                    <BotaoComprar preco={preco} id={id} />
+                    <p> R$ {" "}
+              {`${preco}`.includes(".")
+                ? `${preco}`.replace(".", ",")
+                : `${preco},00`} </p>
                 </div>
                 <span>{categoria}</span>
             </article>
@@ -22,5 +23,4 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
     )
 }
 
-export default CardJogo;
-
+export default PrecoNoCarrinho

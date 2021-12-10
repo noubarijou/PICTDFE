@@ -30,12 +30,12 @@ const Header = () => {
                                         className="d-inline-block align-top"
                                     />
                                 </Navbar.Brand>
-                                <button type="button" id="button-carrinho" className="btn position-relative">
+                                <Link to="/carrinho" type="button" id="button-carrinho" className="btn position-relative">
                                     <Cart color="white" size={30} />
                                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
                                         {carrinho.length}
                                     </span>
-                                </button>
+                                </Link>
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mx-auto">
                                         <Nav.Link as={Link} to="/jogos">Jogos</Nav.Link>
@@ -97,12 +97,12 @@ const Header = () => {
                                             <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
                                             <NavDropdown.Item as={Link} to="/cadastro">Cadastrar</NavDropdown.Item>
                                         </NavDropdown>
-                                        <button type="button" id="button-carrinho" className="btn position-relative">
-                                            <Cart color="white" size={30} />
-                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                                {carrinho.length}
-                                            </span>
-                                        </button>
+                                        <Link to="/carrinho" type="button" id="button-carrinho" className="btn position-relative">
+                                    <Cart color="white" size={30} />
+                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                        {carrinho.length}
+                                    </span>
+                                </Link>
                                     </Nav>
                                 </Navbar.Collapse>
                             </Container>
