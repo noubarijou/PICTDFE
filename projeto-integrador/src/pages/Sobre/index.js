@@ -1,8 +1,13 @@
 import { Linkedin } from "react-bootstrap-icons";
 import Membros from "./membros.js";
 import "./style.scss";
+import {Helmet} from 'react-helmet'
 
 const Sobre = () => (
+  <>
+  <Helmet>
+  <title>Poison Games | Sobre</title>
+  </Helmet>
   <section id="Sobre">
     <h1>Sobre</h1>
     <div className="linha mb-4"></div>
@@ -52,6 +57,7 @@ const Sobre = () => (
       }
     </article>
   </section>
+  </>
 );
 
 export default Sobre;

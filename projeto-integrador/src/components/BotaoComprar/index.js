@@ -4,7 +4,7 @@ import { CarrinhoContext } from '../../context/jogoContext';
 import { CarrinhoState } from "../../context/jogoContext";
 import './style.scss'
 
-const BotaoComprar = ({ preco, id}) => {
+const BotaoComprar = ({ preco, jogo, id}) => {
   const { carrinho, addJogo, rmJogo } = useContext(CarrinhoContext)
 
   return (
@@ -14,7 +14,7 @@ const BotaoComprar = ({ preco, id}) => {
 
           ?
 
-          <button className="btn-compra fw-bold devolver" onClick={() => rmJogo({ id })}>
+          <button className="btn-compra fw-bold devolver" onClick={() => rmJogo({ jogo })}>
             <CartDash color="black" size={16} />
             <p>
               R$ {" "}
@@ -26,7 +26,7 @@ const BotaoComprar = ({ preco, id}) => {
 
           :
 
-          <button className="btn-compra fw-bold comprar" onClick={() => addJogo({ id })}>
+          <button className="btn-compra fw-bold comprar" onClick={() => addJogo({jogo })}>
             <CartPlus color="black" size={16} />
             R$ {" "}
             {`${preco}`.includes(".")

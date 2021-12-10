@@ -14,15 +14,6 @@ const Jogos = () => {
         <title>Poison Games | Jogos</title>
       </Helmet>
       <section id="jogos-categoria">
-        <aside>
-        {jogos.map((e) => (<Form.Check
-            inline
-            label={e.nome}
-            name="group1"
-            type="radio"
-            />))
-        }
-        </aside>
         <section className="entrie-jogos">
           {jogos[0] ? (
             jogos.map((e, index) => {
