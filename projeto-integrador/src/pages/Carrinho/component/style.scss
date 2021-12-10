@@ -1,6 +1,23 @@
 @import "../../../root.scss";
 
-.card-jogo-carrinho {
+
+.valor{
+    justify-content: flex-end;
+}
+
+.card-jogo-carrinho{
+    width:1000px;
+    
+}
+
+.linha-carrinho {
+    height: .5px;
+    background-color: $destaque;
+    margin: 10px;
+    
+}
+
+/* .card-jogo-carrinho {
     display: flex;
     width: 300px;
     color: #ccc;
@@ -93,3 +110,4 @@ $screen-xl-min: 1200px;
         width: calc(25% - 2rem);
     }
 }
+ */
