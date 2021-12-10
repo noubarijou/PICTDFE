@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -8,6 +8,11 @@ import { useNavigate } from 'react-router';
 import './style.scss';
 
 const Cadastro = () => {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   const navigate = useNavigate();
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
 

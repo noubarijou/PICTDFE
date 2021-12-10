@@ -4,9 +4,29 @@
     height: 2px;
     background-color: $destaque;
     margin: 0 8rem 1rem;
-    
 }
 
-section{
-    justify-content: center;    
+section {
+    justify-content: center;
+}
+
+// Small devices
+@media (min-width: $screen-sm-min) {
+}
+
+//Small tables
+@media (min-width: $screen-lg-min) {
+}
+
+//Large tables
+@media (min-width: $screen-xl-min) {
+    .linha-carrossel {
+        height: 2px;
+        background-color: $destaque;
+        margin: 0 8rem 1rem;
+    }
+
+    section {
+        justify-content: center;
+    }
 }

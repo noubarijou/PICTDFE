@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import useAxios from "../../Hooks/useAxios";
 import "./style.scss";
@@ -7,6 +7,11 @@ import { Spinner } from "react-bootstrap";
 
 
 const Jogos = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   const jogos = useAxios(`/categoria`);
   return (
     <>

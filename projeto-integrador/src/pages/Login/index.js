@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Container } from "react-bootstrap";
@@ -8,6 +8,11 @@ import { useNavigate } from "react-router";
 import "./style.scss";
 
 const Login = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   const navigate = useNavigate();
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
   const validationSchema = Yup.object({
@@ -18,6 +23,7 @@ const Login = () => {
       .min(8, "pelo menos 8 bagulhinho...")
       .required("tem que botá uma senha"),
   });
+
   return (
     <>
       <Helmet>
