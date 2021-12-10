@@ -14,34 +14,36 @@ const Footer = () => {
                         {/* coluna 1 */}
                         <article id="col1" className="col-md-3 col-sm-6">
                             <div id="footerLogo">
-                                <img
-                                    alt="Cogumelo roxo com bolinhas verdes e olhos de ponta cabeça"
-                                    src={logo}
-                                    height="100"
-                                    id="logo"
-                                    className="d-inline-block align-top"
-                                />{' '}
+                                <a href="/" >
+                                    <img
+                                        alt="Cogumelo roxo com bolinhas verdes e olhos de ponta cabeça"
+                                        src={logo}
+                                        height="100"
+                                        id="logo"
+                                        className="d-inline-block align-top"
+                                    /></a>
+                                {' '}
                                 <h4>Poison Games</h4>
                             </div>
                             <div id="midiasSociais">
                                 <ul className="list-unstyled">
                                     <li>
-                                        <a className="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                                             <Instagram color="white" size={25} />
                                         </a>
-                                        <a className="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                                             <Facebook color="white" size={25} />
                                         </a>
-                                        <a className="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="https://www.twitch.tv/" target="_blank" rel="noreferrer">
                                             <Twitch color="white" size={25} />
                                         </a>
-                                        <a className="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="https://discord.com/" target="_blank" rel="noreferrer">
                                             <Discord color="white" size={25} />
                                         </a>
-                                        <a className="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="https://twitter.com/" target="_blank" rel="noreferrer">
                                             <Twitter color="white" size={25} />
                                         </a>
-                                        <a className="text-white px-2" href="#!">
+                                        <a className="text-white px-2" href="https://www.youtube.com/" target="_blank" rel="noreferrer">
                                             <Youtube color="white" size={25} />
                                         </a>
                                     </li>

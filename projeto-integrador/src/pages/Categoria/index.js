@@ -5,6 +5,7 @@ import useAxios from "../../Hooks/useAxios";
 import { Spinner } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './style.scss';
 
 
 const Categoria = () => {
@@ -24,6 +25,8 @@ const Categoria = () => {
       <Helmet>
         <title>{`Poison Games | ${categorias[0] ? categorias.filter((item, index) => item.id === parseInt(categoria))[0].nome : ''}`}</title>
       </Helmet>
+
+      <div className="linha-carrossel"></div>
 
       {categorias[0] ?
         (
