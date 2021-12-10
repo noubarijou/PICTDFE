@@ -16,13 +16,17 @@
     }
     .texticulo {
         font-size: 10px;
+        p {
+            text-align: justify;
+            font-size: 18px;
+            font-weight: 400;
+            &.assinatura{
+                text-align: center;
+                margin-bottom: 1.5rem;                
+            }
+        }
     }
-    p {
-        text-align: justify;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    article {
+    .card-membros {
         display: flex;
         justify-content: space-evenly;
 

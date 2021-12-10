@@ -5,29 +5,16 @@ const Sobre = () => (
   <section id="Sobre">
     <h1>Sobre</h1>
     <div className="linha mb-4"></div>
-    <p className="texticulo">
-      A Poison Games nasceu da ideia oferecer ao mundo gamer uma plataforma
-      limpa e direta, acesso aos melhores jogos e com preços acessíveis - mesmo
-      que a loja seja fictícia. A equipe da Poison Games é formada originalmente
-      por 3 dos membros que já haviam feito alguns trabalhos juntos. Adicionando
-      uma mestra em front-end e um jovem padawan, a equipe ficou completa. Em
-      pouco mais de uma semana, aplicamos o conteúdo proposto até agora pelo CTD
-      da DH, e o resultado é esse que você pode ver. Com uma abordagem de
-      'funciona na minha máquina', muitas sessões no Discord lotadas de péssimas
-      piadas (mas muitas risadas) e alguns eventos que nos obrigaram a começar
-      do zero concluímos essa fase do curso com essa aplicação. Agradecemos aos
-      professores pela paciência (especialmente com as anteriormente mencionadas
-      piadas sem graça) e dedicação ao nosso aprendizado. E um valeu em especial
-      pra nossa querida tutora Vi, que diferente dos professores, nos aguenta
-      durante pelo menos 6h por dia há mais de 4 meses - mas nos acompanha desde
-      março de 2021. Fica aqui o nosso agradecimento! Qualquer dúvida, não entre
-      em contato. Qualquer coisa que pareça interessante, pode pegar o código!
-      Se tem uma coisa que aprendemos nessa caminhada, é que sem o código
-      alheio, fica quase impossível aprender.
-      <div className="linha mb-4"></div> 
-      Equipe Poison Games - a melhor loja de jogos da sua rua.
-    </p>
-    <article>
+    <article className="texticulo">
+      <p>A Poison Games nasceu da ideia de oferecer ao mundo gamer uma plataforma limpa e direta, acesso aos melhores jogos e com preços acessíveis - mesmo que a loja seja fictícia. A equipe da Poison Games é formada originalmente por 3 dos membros que já haviam feito alguns trabalhos juntos. Adicionando uma mestra em front-end e um jovem padawan, a equipe ficou completa.</p>
+      <p>Em pouco mais de uma semana, aplicamos o conteúdo proposto até agora pelo CTD da DH, e o resultado é esse que você pode ver. Com uma abordagem de 'funciona na minha máquina', muitas sessões no Discord lotadas de péssimas piadas (mas muitas risadas) e alguns eventos que nos obrigaram a começar do zero concluímos essa fase do curso com essa aplicação.</p>
+      <p>Agradecemos aos professores pela paciência (especialmente com as anteriormente mencionadas piadas sem graça) e dedicação ao nosso aprendizado. E um valeu em especial pra nossa querida tutora Vi, que diferente dos professores, nos aguenta durante pelo menos 6h por dia há mais de 4 meses - mas nos acompanha desde março de 2021. Fica aqui o nosso agradecimento!</p>
+      <p>Qualquer dúvida, não entre em contato. Qualquer coisa que pareça interessante, pode pegar o código!
+        Se tem uma coisa que aprendemos nessa caminhada, é que sem o código alheio, fica quase impossível aprender.</p>
+      <div className="linha mb-4"></div>
+      <p className="assinatura"><i>Equipe Poison Games - a melhor loja de jogos da sua rua.</i></p>
+    </article>
+    <article className="card-membros">
       <div>
         <img
           src="https://cdn.discordapp.com/attachments/889532130495975446/916049906005848134/amigosDoAndreTulio.png"
