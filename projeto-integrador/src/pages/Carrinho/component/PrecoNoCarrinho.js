@@ -16,7 +16,7 @@ const PrecoNoCarrinho = ({ id, imagem, titulo, preco, categoria }) => {
                 </div>
                 <div className="mx-3 col-md-6">
                     <p className="fw-bold">{titulo}</p>
-                    <span onClick={(() => rmJogo({ id, imagem, titulo, preco, categoria }))}>Remover</span>
+                    <span id="rm-jogo" onClick={(() => rmJogo({ id, imagem, titulo, preco, categoria }))}>Remover</span>
                 </div>
                 <div className="valor col-md-1">
                     <p> R$ {" "}

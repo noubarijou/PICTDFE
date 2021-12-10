@@ -1,21 +1,23 @@
 @import "../../../root.scss";
 
+.card-jogo-carrinho {
 
-.valor{
-    justify-content: flex-end;
-}
+    #rm-jogo {
+        cursor: pointer;
+    }
 
-.card-jogo-carrinho{
-    width:1000px;
-    
+    .valor{
+        justify-content: flex-end;
+    }
+
 }
 
 .linha-carrinho {
     height: .5px;
     background-color: $destaque;
     margin: 10px;
-    
 }
+
 
 /* .card-jogo-carrinho {
     display: flex;
