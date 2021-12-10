@@ -2,9 +2,22 @@
 
 .card-jogo-carrinho {
 
-    #rm-jogo {
-        cursor: pointer;
+    .nomeRemover{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        #rm-jogo {
+            cursor: pointer;
+            color: rgba(184, 71, 250, 0.5);
+            width: 62px;
+            &:hover{
+                color:$branco;
+            
+            }
+        }
     }
+    
 
     .valor{
         justify-content: flex-end;

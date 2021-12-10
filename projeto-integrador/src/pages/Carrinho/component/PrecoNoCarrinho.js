@@ -14,7 +14,7 @@ const PrecoNoCarrinho = ({ id, imagem, titulo, preco, categoria }) => {
                         <img className="mb-2 w-100" src={imagem} alt={titulo} />
                     </Link>
                 </div>
-                <div className="mx-3 col-md-6">
+                <div className="nomeRemover mx-3 col-md-6">
                     <p className="fw-bold">{titulo}</p>
                     <span id="rm-jogo" onClick={(() => rmJogo({ id, imagem, titulo, preco, categoria }))}>Remover</span>
                 </div>
