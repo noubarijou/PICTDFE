@@ -43,14 +43,16 @@
                     .carousel-item {
                         text-align: center;
                         background: rgb(0, 0, 0);
-                        background: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 85%);
+                        background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 85%);
+                        
 
                         .card-jogo {
-                            border-bottom: 1px solid transparent;
                             padding-bottom: 0.5rem;
                             text-align: left;
                             display: inline-block;
                             max-width: 330px;
+                           /*  background-color: #130020; */
+                            /* border-bottom: 1px solid $destaque; */
                         }
                     }
                 }
