@@ -36,6 +36,7 @@ h1 {
             color: $branco;
             border: 1px solid transparent;
             display: block;
+            border-radius: 5px;
             &::placeholder {
                 color: $branco;
                 font-weight: lighter;
