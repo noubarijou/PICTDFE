@@ -51,7 +51,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index === 1).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -60,7 +60,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index === 2).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -69,7 +69,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index === 3).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -78,7 +78,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index === 4).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -87,7 +87,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index === 5).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -103,7 +103,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index < 2).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -112,7 +112,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index < 4 && index >= 2).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -121,7 +121,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index < 6 && index >= 4).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -137,7 +137,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index < 3).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }
@@ -146,7 +146,7 @@ const Home = () => {
                                                 {
                                                     jogos.filter((item, index) => index < 6 && index >= 3).map((jogo, index) => {
                                                         return (
-                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                                            <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                                         )
                                                     })
                                                 }

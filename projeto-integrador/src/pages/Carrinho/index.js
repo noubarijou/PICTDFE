@@ -22,22 +22,10 @@ const Carrinho = () => {
         <div className="linha"></div>
 
         {carrinho.length ? (
-          carrinho.map((e) => {
-              return (jogos
-              .filter((item, index) => item.id === e.id)
-              .map((i) => (
-                  <>
-                <PrecoNoCarrinho
-                  key={e.id}
-                  id={e.id}
-                  titulo={i.titulo}
-                  imagem={i.imagem}
-                  preco={i.preco}
-                />
-{/*                 {setTotal(i.preco)}                
- */}                </>
-              )));
-          })
+          <>
+            {carrinho.map((e) => (jogos.filter((item, index) => item.id ===e.id).map((i) => (<PrecoNoCarrinho key={e.id} id={e.id} titulo={i.titulo} imagem={i.imagem} preco={i.preco} />
+            ))) )}<h1>{carrinho.map((e => e.preco))}</h1>
+          </>
         ) : (
           <div className="mb-4">FORTALECE AÍ POW</div>
         )}
