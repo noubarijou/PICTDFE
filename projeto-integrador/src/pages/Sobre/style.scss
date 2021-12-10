@@ -32,7 +32,6 @@
         gap: 2rem 1rem;
         .membro {
             margin: 0 auto;
-            /* width: 20%; */
             .foto-perfil{
                 img {
                     width: 100%;
@@ -53,10 +52,9 @@
                     justify-content: space-around;
                     align-items: center;
                     a{
-                        width: 50%;
                         min-width: 40px;
                         img{
-                            width: 80%;
+                            width: 40px;
                         }
                     }
                 }
@@ -100,4 +98,10 @@
         }
     }
     
+}
+
+@media (min-width: $screen-md-min){
+    .membro{
+        width: 20%;
+    }
 }
