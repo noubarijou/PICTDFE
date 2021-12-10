@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
-import "./style.scss";
+import "../../assets/css/form.scss";
 
 const Login = () => {
 
@@ -29,7 +29,7 @@ const Login = () => {
       <Helmet>
         <title>Poison Games | Login</title>
       </Helmet>
-      <Container id="login">
+      <Container id="login" className="fundo">
         <Formik
           initialValues={{
             email: "",

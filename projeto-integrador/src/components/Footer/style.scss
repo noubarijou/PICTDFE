@@ -4,6 +4,9 @@
   a{
     color: $branco;
     text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   background-color: #1F2326 !important;
   padding: 2.5rem 0 0 0 ;
@@ -18,6 +21,7 @@
           justify-content: center;
           h4{
             align-self: center;
+            text-transform: uppercase;
           } 
         }
       }
@@ -39,6 +43,7 @@
     }
     .footer-bottom{
       border-top: 3px solid rgb(4, 251, 65);
+      padding-bottom: 0.8rem;
     }
   }
   

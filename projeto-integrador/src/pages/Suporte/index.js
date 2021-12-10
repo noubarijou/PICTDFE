@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Swal from 'sweetalert2';
 import {Container} from 'react-bootstrap';
-import './style.scss';
+import "../../assets/css/form.scss";
 
 
 const Suporte = () => {
@@ -25,7 +25,7 @@ const Suporte = () => {
       <Helmet>
         <title>Poison Games | Suporte</title>
       </Helmet>
-      <Container id="suporte">
+      <Container id="suporte" className="fundo">
         <h1>Manda um oi panois</h1>
         <div className="linha mb-4"></div>
         <Formik initialValues={{

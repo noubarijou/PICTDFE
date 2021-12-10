@@ -5,7 +5,8 @@ import * as Yup from 'yup';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
-import './style.scss';
+import "../../assets/css/form.scss";
+
 
 const Cadastro = () => {
   
@@ -28,7 +29,7 @@ const Cadastro = () => {
       <Helmet>
         <title>Poison Games | Cadastro</title>
       </Helmet>
-      <Container id="cadastro">
+      <Container id="cadastro" className="fundo">
         <Formik initialValues={{
           nomecompleto: '',
           datadenascimento: '',
