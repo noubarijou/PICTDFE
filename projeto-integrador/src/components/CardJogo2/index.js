@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import BotaoComprar from '../BotaoComprar';
 import './style.scss';
 
-const CardJogo2 = ({ id, titulo, imagem, categoria, preco, descricao }, jogo) => {
+const CardJogo2 = ({ id, titulo, imagem, categoria, preco, descricao, jogo }) => {
   return (
     <>
       <div id="card" className="card mb-3" >

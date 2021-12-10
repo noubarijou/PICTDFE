@@ -21,7 +21,7 @@ const Carrossel = ({ categoria, id, jogo }) => {
                     return (
                       e.produtos.filter((item, index) => index < 3).map((jogo, index) => {
                         return (
-                          <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} />
+                          <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} jogo={jogo}/>
                         )
                       })
                     )
@@ -34,7 +34,7 @@ const Carrossel = ({ categoria, id, jogo }) => {
                     return (
                       e.produtos.filter((item, index) => index >= 3 && index < 6).map((jogo, index) => {
                         return (
-                          <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} />
+                          <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} jogo={jogo} />
                         )
                       })
                     )
@@ -47,7 +47,7 @@ const Carrossel = ({ categoria, id, jogo }) => {
                     return (
                       e.produtos.filter((item, index) => index >= 6 && index < 9).map((jogo, index) => {
                         return (
-                          <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} />
+                          <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} preco={jogo.preco} categoria={e.nome} jogo={jogo} />
                         )
                       })
                     )

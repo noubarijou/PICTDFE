@@ -13,8 +13,6 @@ const Jogo = () => {
     const { jogoId } = useParams();
     const jogos = useAxios(`/produto`);
 
-    console.log(jogoId)
-
     useEffect(() => {
         setJogo(jogoId);
         window.scrollTo(0, 0)
@@ -64,14 +62,7 @@ const Jogo = () => {
                             return (
                                 `${e.preco}`
                             )
-                        })} />
-                        {/* <button className="fw-bold">
-                            <CartPlus color="black" size={16} />R$ {jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
-                                return (
-                                    `${e.preco}`.includes(".") ? `${e.preco}`.replace('.', ',') : `${e.preco},00`
-                                )
-                            })}
-                        </button> */}
+                        })} jogo={jogos[jogoId - 1]} id={parseInt(jogos[jogoId - 1].id)} />
                     </article>
                 </section>)
                 :

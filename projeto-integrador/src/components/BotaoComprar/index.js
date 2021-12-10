@@ -3,7 +3,7 @@ import { CartPlus, CartDash } from "react-bootstrap-icons";
 import { CarrinhoContext } from '../../context/jogoContext';
 import './style.scss'
 
-const BotaoComprar = ({ preco, jogo, id}) => {
+const BotaoComprar = ({ preco, jogo, id }) => {
   const { carrinho, addJogo, rmJogo } = useContext(CarrinhoContext)
 
   return (
@@ -13,7 +13,7 @@ const BotaoComprar = ({ preco, jogo, id}) => {
 
           ?
 
-          <button className="btn-compra fw-bold devolver" onClick={() => rmJogo({...jogo })}>
+          <button className="btn-compra fw-bold devolver" onClick={() => rmJogo({ ...jogo })}>
             <CartDash color="black" size={16} />
             <p>
               R$ {" "}
@@ -25,7 +25,7 @@ const BotaoComprar = ({ preco, jogo, id}) => {
 
           :
 
-          <button className="btn-compra fw-bold comprar" onClick={() => addJogo({...jogo })}>
+          <button className="btn-compra fw-bold comprar" onClick={() => addJogo({ ...jogo })}>
             <CartPlus color="black" size={16} />
             R$ {" "}
             {`${preco}`.includes(".")
