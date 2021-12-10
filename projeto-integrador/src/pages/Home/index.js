@@ -166,7 +166,7 @@ const Home = () => {
                             {
                                 jogos.filter((item, index) => index < 20).map((jogo, index) => {
                                     return (
-                                        <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} />
+                                        <CardJogo key={index} id={jogo.id} titulo={jogo.titulo} imagem={jogo.imagem} categoria={jogo.categoria.nome} preco={jogo.preco} jogo={jogo} />
                                     )
                                 })
                             }

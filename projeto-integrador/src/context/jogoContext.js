@@ -1,23 +1,32 @@
-import {createContext, useContext, useReducer} from 'react';
+import {createContext, useEffect, useReducer, useContext, useState} from 'react';
 import {jogoReducer} from './jogoReducer';
-const Carrinho = createContext();
+export const CarrinhoContext = createContext();
 
 const JogoContextProvider = ({children}) => {
-    const jogos = [];
-    const [state, dispatch] = useReducer(jogoReducer, {
-        jogos: jogos,
-        cart: []
+    const [carrinho, dispatch] = useReducer(jogoReducer,[],() => {
+        const localData = localStorage.getItem('carrinho');
+        return localData ? JSON.parse(localData) : [];
     });
+    useEffect(() => {
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    }, [carrinho]);
+    const addJogo = (carrinho) => {dispatch({type: 'ADD_JOGO', payload: carrinho})
+
+};
+
+    const rmJogo = (carrinho) => dispatch({type: 'RM_JOGO', payload: carrinho});
+  
+
     return (
         <>
-          <Carrinho.Provider value = {state, dispatch}>
+          <CarrinhoContext.Provider value = {{carrinho, addJogo, rmJogo}}>
             {children}  
-            </Carrinho.Provider>  
+            </CarrinhoContext.Provider>  
         </>
     )
 }
 
 export default JogoContextProvider;
-export const CarrinhoState=() =>{
-    return useContext(Carrinho)
+export const CarrinhoState=()=>{
+    return useContext(CarrinhoContext);
 };

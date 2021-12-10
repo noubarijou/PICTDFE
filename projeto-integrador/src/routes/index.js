@@ -10,11 +10,13 @@ import Jogo from '../pages/Jogos/Jogo';
 import Jogos from '../pages/Jogos';
 import Suporte from '../pages/Suporte';
 import Categoria from '../pages/Categoria'
+import JogoContextProvider from '../context/jogoContext';
 
 
 
 const RouteList = () => (
   <BrowserRouter>
+  <JogoContextProvider>
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
@@ -27,6 +29,7 @@ const RouteList = () => (
       <Route path="/suporte" element={<Suporte />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </JogoContextProvider>
     <Footer />
   </BrowserRouter>
 );

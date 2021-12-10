@@ -1,10 +1,9 @@
 // import React from 'react';
-import { CartPlus } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
 import BotaoComprar from '../BotaoComprar';
 import './style.scss';
 
-const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
+const CardJogo = ({ id, titulo, imagem, categoria, preco }, jogo) => {
     return (
         <>
             <article className="card-jogo">
@@ -15,7 +14,7 @@ const CardJogo = ({ id, titulo, imagem, categoria, preco }) => {
                 </Link>
                 <div className="mx-3">
                     <p className="fw-bold">{titulo}</p>
-                    <BotaoComprar preco={preco}/>
+                    <BotaoComprar preco={preco} id={id} jogo={jogo}/>
                 </div>
                 <span>{categoria}</span>
             </article>

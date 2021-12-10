@@ -1,12 +1,19 @@
 export const jogoReducer = (state, action) => {
     switch (action.type) {
-        case "ADICIONAR_NO_CARRINHO":
-            return {...state,carrinho:[...state.carrinho,{...action.payload,qty:1}]};
-        case "REMOVER_DO_CARRINHO": 
-            return {...state,carrinho:state.carrinho.filter(c=>c.id !== action.payload.id)};
-        case "MUDAR_QTY_DO_CARRINHO":
-            return {...state,carrinho:state.carrinho.filter(c=>c.id === action.payload.id ? c.qty = action.payload.qty : c.qty),};
-        default: 
-            return state;
-    }
+        case 'ADD_JOGO':
+          const checaProdutos = state.filter(carrinho => (
+            carrinho.id === action.payload.id
+          ));
+          if (!checaProdutos.length) {
+            return [...state, action.payload];
+          };
+          return state;
+        case 'RM_JOGO':
+            
+
+            return state.filter(e => e.id !== action.payload.id)
+            
+        default:
+          return state;
+      }
 }
