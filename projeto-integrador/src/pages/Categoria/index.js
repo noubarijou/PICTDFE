@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import CardJogo2 from "../../components/CardJogo2";
 import useAxios from "../../Hooks/useAxios";

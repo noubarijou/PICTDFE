@@ -9,10 +9,10 @@ import { CarrinhoContext } from '../../context/jogoContext';
 
 
 const Header = () => {
-    const { carrinho, addJogo, rmJogo } = useContext(CarrinhoContext);
+    const { carrinho } = useContext(CarrinhoContext);
 
 
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     return (
         <>
@@ -98,11 +98,11 @@ const Header = () => {
                                             <NavDropdown.Item as={Link} to="/cadastro">Cadastrar</NavDropdown.Item>
                                         </NavDropdown>
                                         <Link to="/carrinho" type="button" id="button-carrinho" className="btn position-relative">
-                                    <Cart color="white" size={30} />
-                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                        {carrinho.length}
-                                    </span>
-                                </Link>
+                                            <Cart color="white" size={30} />
+                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                                {carrinho.length}
+                                            </span>
+                                        </Link>
                                     </Nav>
                                 </Navbar.Collapse>
                             </Container>

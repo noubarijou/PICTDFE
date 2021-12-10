@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CarrinhoContext } from '../../../context/jogoContext';
 import './style.scss';
 
 const PrecoNoCarrinho = ({ id, imagem, titulo, preco, categoria }) => {
+    const { carrinho, rmJogo } = useContext(CarrinhoContext);
+
     return (
         <>
             <article className="card-jogo-carrinho row g-0">
@@ -12,6 +16,7 @@ const PrecoNoCarrinho = ({ id, imagem, titulo, preco, categoria }) => {
                 </div>
                 <div className="mx-3 col-md-6">
                     <p className="fw-bold">{titulo}</p>
+                    <span onClick={(() => rmJogo({ id, imagem, titulo, preco, categoria }))}>Remover</span>
                 </div>
                 <div className="valor col-md-1">
                     <p> R$ {" "}

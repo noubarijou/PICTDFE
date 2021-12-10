@@ -1,7 +1,6 @@
-import { useContext, useEffect, useState } from "react";
-import { CartPlus, CartFill, CartDash } from "react-bootstrap-icons";
+import { useContext } from "react";
+import { CartPlus, CartDash } from "react-bootstrap-icons";
 import { CarrinhoContext } from '../../context/jogoContext';
-import { CarrinhoState } from "../../context/jogoContext";
 import './style.scss'
 
 const BotaoComprar = ({ preco, jogo, id}) => {

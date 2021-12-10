@@ -9,7 +9,6 @@ import CardJogo from "../../components/CardJogo";
 import { Helmet } from "react-helmet";
 import { Spinner } from 'react-bootstrap';
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
-import CarouselCard from "./components/CarouselCard";
 
 const Home = () => {
 

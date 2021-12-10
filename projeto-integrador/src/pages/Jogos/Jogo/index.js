@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import useAxios from "../../../Hooks/useAxios";
 import { Helmet } from "react-helmet";
-import { CartPlus } from 'react-bootstrap-icons';
 import { Spinner } from 'react-bootstrap';
 
 import './style.scss';
@@ -62,9 +61,10 @@ const Jogo = () => {
                             })}
                         </p>
                         <BotaoComprar preco={jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
-                                return (
-                                    `${e.preco}`
-                                )})} />
+                            return (
+                                `${e.preco}`
+                            )
+                        })} />
                         {/* <button className="fw-bold">
                             <CartPlus color="black" size={16} />R$ {jogos.filter((item, index) => item.id === parseInt(jogo)).map((e) => {
                                 return (

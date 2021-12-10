@@ -1,16 +1,21 @@
 import Helmet from "react-helmet";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext, useCallback } from "react";
 import { Container } from "react-bootstrap";
 import { CarrinhoContext } from "../../context/jogoContext";
 import "./style.scss";
 import useAxios from "../../Hooks/useAxios";
-import CardJogo from "../../components/CardJogo";
 import PrecoNoCarrinho from "./component/PrecoNoCarrinho";
 
 const Carrinho = () => {
-  const { carrinho } = useContext(CarrinhoContext);
+
+  const { carrinho, rmJogo } = useContext(CarrinhoContext);
   const jogos = useAxios(`/produto`);
-  const [total, setTotal] = useState(0);
+
+  let precoTotal = 0;
+
+  carrinho.map((e => precoTotal += e.preco))
+
+  carrinho.map((jogo) => (jogo))
 
   return (
     <>
@@ -23,8 +28,13 @@ const Carrinho = () => {
 
         {carrinho.length ? (
           <>
-            {carrinho.map((e) => (jogos.filter((item, index) => item.id ===e.id).map((i) => (<PrecoNoCarrinho key={e.id} id={e.id} titulo={i.titulo} imagem={i.imagem} preco={i.preco} />
-            ))) )}<h1>{carrinho.map((e => e.preco))}</h1>
+            {carrinho.map((i) => (<PrecoNoCarrinho key={i.id} id={i.id} titulo={i.titulo} imagem={i.imagem} preco={i.preco} />
+            ))}
+            <h1>
+              Total R$ {`${precoTotal}`.includes(".") ?
+                `${precoTotal}`.replace(".", ",")
+                : `${precoTotal},00`}
+            </h1>
           </>
         ) : (
           <div className="mb-4">FORTALECE AÍ POW</div>
