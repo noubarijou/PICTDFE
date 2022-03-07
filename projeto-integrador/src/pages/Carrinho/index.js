@@ -1,5 +1,5 @@
 import Helmet from "react-helmet";
-import { useState, useContext, useCallback } from "react";
+import { useContext} from "react";
 import { Container } from "react-bootstrap";
 import { CarrinhoContext } from "../../context/jogoContext";
 import "./style.scss";
